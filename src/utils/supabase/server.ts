@@ -11,9 +11,12 @@ export function createClient(cookieStoreParam?: any) {
     return cookies();
   };
 
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://aprgbpckjmozcylfjiku.supabase.co';
+  const key = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || 'sb_publishable_oGvSmxi_aYwIexjwDJpjmQ_QZP7LLeg';
+
   return createServerClient<Database>(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!,
+    url,
+    key,
     {
       cookies: {
         async getAll() {
