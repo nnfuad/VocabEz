@@ -4,7 +4,7 @@ Master all **810 GregMAT GRE Words** across 27 Sets in **30 Days** through Duoli
 
 **Live Application:** [https://vocabez.vercel.app](https://vocabez.vercel.app)
 
-Try the live application directly in your browser at [vocabez.vercel.app](https://vocabez.vercel.app) to test the learning roadmap, strategy practice hub, and audio pronunciation without any setup.
+Test the live application directly in your browser at [vocabez.vercel.app](https://vocabez.vercel.app) to explore the 27-set learning roadmap, strategy practice hub, and audio pronunciation without local setup.
 
 [![Next.js](https://img.shields.io/badge/Next.js-16.4-black?logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19-blue?logo=react)](https://react.dev/)
@@ -34,6 +34,84 @@ Conquering 810 high-frequency GRE words in one month is difficult with static fl
 3. **Practice Anything Anytime Strategy Hub:** Train specialized GRE exam skills on demand without being restricted to linear sets.
 4. **Weak Words Hospital:** Automatic triage clinic where incorrectly answered words are quarantined for targeted rehabilitation with zero heart penalty.
 5. **Guest-First & Cloud-Synced:** Start practicing immediately without signing up (persisted in browser storage with data-loss warnings), and seamlessly sync all progress to Supabase Cloud once an account is created.
+
+---
+
+## Methodology
+
+The design and development of VocabEz followed a five-stage engineering and cognitive science pipeline:
+
+```
++---------------------------------------------------------------------------------------+
+|                                  METHODOLOGY PIPELINE                                 |
++---------------------------------------------------------------------------------------+
+|  1. DATA INGESTION & NORMALIZATION                                                    |
+|     - Raw 810 GregMAT Vocabulary Dataset (27 Sets x 30 Words)                          |
+|     - OCR Error Cleansing & Structural Validation                                     |
+|     - Connotation Classification (+ / - / 0) & Synonym Twin Mapping                   |
+|                                         |                                             |
+|                                         v                                             |
+|  2. COGNITIVE STRATEGY & QUESTION GENERATION                                          |
+|     - SM-2-30 Spaced Repetition Scheduling (Capped to 30-Day Exam Horizon)            |
+|     - Dynamic Question Synthesizer (Sentence Equivalence, Polarity, Context Cloze)    |
+|     - Morphological Root Association (-loqu-, -path-, -bell-, -plac-)                 |
+|                                         |                                             |
+|                                         v                                             |
+|  3. GAMIFICATION & HABIT MECHANICS                                                    |
+|     - Duolingo-Style 3D Tactile Interactive Stepping-Stone Roadmap                    |
+|     - 5-Heart Health Economy & Streak Multipliers                                     |
+|     - Automatic Weak Words Hospital Triage for High-Yield Remediation                 |
+|                                         |                                             |
+|                                         v                                             |
+|  4. RESILIENT STATE & HYBRID STORAGE                                                  |
+|     - Zero-Friction Guest Mode with LocalStorage Engine & Loss Warning Guards         |
+|     - Seamless Database Migration to Supabase Auth & PostgreSQL on Registration       |
+|     - Row-Level Security (RLS) for Secure Cross-Device Continuity                     |
+|                                         |                                             |
+|                                         v                                             |
+|  5. DEPLOYMENT & EDGE OPTIMIZATION                                                    |
+|     - Next.js 16 App Router + React 19 SSR Architecture                               |
+|     - Mobile-First Touch Targets (>= 46px) with Glassmorphism Navigation              |
+|     - Production Build Deployed to Vercel Global Edge CDN (vocabez.vercel.app)        |
++---------------------------------------------------------------------------------------+
+```
+
+### Architectural Flowchart
+
+```mermaid
+flowchart TD
+    subgraph DataEngineering["1. Data Engineering & Normalization"]
+        A["810 GregMAT Raw Words\n(27 Sets x 30 Words)"] --> B["OCR Cleansing & Normalization"]
+        B --> C["Semantic Tagging:\n(+ / - / 0) Connotations & Synonym Pairs"]
+        C --> D["enrichedVocab.json\nClean Word Bank"]
+    end
+
+    subgraph StrategyEngine["2. Cognitive Strategy Engine"]
+        D --> E["SM-2-30 Spaced Repetition Queue"]
+        D --> F["GRE Math Strategy Engine:\nConnotation Algebra & Twins"]
+        D --> G["Dynamic Question Synthesizer:\nEquivalence, Cloze, Blitz"]
+    end
+
+    subgraph Gamification["3. Gamification & Retention Loop"]
+        E & F & G --> H["3D Stepping-Stone Roadmap"]
+        H --> I["Daily Streak & XP Multipliers"]
+        H --> J["5-Heart Life Engine"]
+        J -- "Mistake Triaged" --> K["Weak Words Hospital\n(Zero-Heart Rehabilitation)"]
+        K -- "Re-tested to 100%" --> H
+    end
+
+    subgraph StateStorage["4. State & Cloud Sync"]
+        H --> L{"Auth State"}
+        L -- "Guest Player" --> M["Browser LocalStorage Engine\nwith Data-Loss Warning Guard"]
+        L -- "Authenticated" --> N["Supabase PostgreSQL\nRow-Level Security (RLS)"]
+        M -- "Upon Sign Up" --> N
+    end
+
+    subgraph ProductionDeployment["5. Production Delivery"]
+        N & M --> O["Next.js 16 (App Router) + Tailwind CSS"]
+        O --> P["Vercel Edge Global CDN\nvocabez.vercel.app"]
+    end
+```
 
 ---
 
@@ -109,7 +187,8 @@ VocabEz/
 |   |   `-- vocab.ts                 # Vocabulary & Strategy Interfaces
 |   `-- utils/
 |       `-- supabase/                # SSR, Client, and Middleware Supabase Clients
-|-- supabase_schema.sql              # PostgreSQL Schema with Row-Level Security
+|-- supabase/
+|   `-- schema.sql                   # PostgreSQL Schema with Row-Level Security
 |-- tailwind.config.ts               # Custom Duo Color Palette & Tactile Shadows
 `-- package.json
 ```
@@ -118,7 +197,7 @@ VocabEz/
 
 ## Database Setup (Supabase)
 
-The database schema is defined in `supabase_schema.sql`.
+The database schema is defined in `supabase/schema.sql`.
 
 ### Tables
 
@@ -130,7 +209,7 @@ The database schema is defined in `supabase_schema.sql`.
 
 1. Open your project in the [Supabase Dashboard](https://supabase.com/dashboard).
 2. Go to the **SQL Editor**.
-3. Copy and run the contents of `supabase_schema.sql`.
+3. Copy and run the contents of `supabase/schema.sql`.
 4. Row-Level Security (RLS) is automatically enabled to ensure each user can only read/write their own records.
 
 ---
