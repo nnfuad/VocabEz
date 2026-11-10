@@ -11,6 +11,7 @@ export default function WordsDirectoryPage() {
   const [search, setSearch] = React.useState('');
   const [selectedSet, setSelectedSet] = React.useState<number | 'all'>('all');
   const [selectedConnotation, setSelectedConnotation] = React.useState<Connotation | 'all'>('all');
+  const [displayLimit, setDisplayLimit] = React.useState(80);
 
   const filtered = words.filter((w) => {
     const matchesSearch =
@@ -60,6 +61,34 @@ export default function WordsDirectoryPage() {
             placeholder="Search words or definitions (e.g. loquacious, strict, placate)..."
             className="w-full pl-11 pr-4 py-2.5 rounded-2xl border-2 border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm font-bold text-gray-900 dark:text-white focus:outline-none focus:border-[#1CB0F6]"
           />
+        </div>
+
+        {/* Set Filter Pills */}
+        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none text-xs font-black">
+          <span className="text-gray-400 mr-1 whitespace-nowrap">Set:</span>
+          <button
+            onClick={() => setSelectedSet('all')}
+            className={`px-2.5 py-1 rounded-xl whitespace-nowrap transition-all ${
+              selectedSet === 'all'
+                ? 'bg-[#1CB0F6] text-white shadow-sm'
+                : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200'
+            }`}
+          >
+            All Sets (810)
+          </button>
+          {Array.from({ length: 27 }, (_, i) => i + 1).map((s) => (
+            <button
+              key={s}
+              onClick={() => setSelectedSet(s)}
+              className={`px-2.5 py-1 rounded-xl whitespace-nowrap transition-all ${
+                selectedSet === s
+                  ? 'bg-[#58CC02] text-white shadow-sm'
+                  : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200'
+              }`}
+            >
+              Set {s}
+            </button>
+          ))}
         </div>
 
         {/* Filter controls */}
@@ -117,7 +146,7 @@ export default function WordsDirectoryPage() {
 
       {/* Words Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {filtered.slice(0, 80).map((w) => (
+        {filtered.slice(0, displayLimit).map((w) => (
           <div
             key={w.id}
             className="bg-white dark:bg-[#202F36] border-2 border-gray-200 dark:border-gray-700/60 rounded-3xl p-5 shadow-sm space-y-3 hover:border-[#1CB0F6] transition-all"
@@ -178,10 +207,21 @@ export default function WordsDirectoryPage() {
         ))}
       </div>
 
-      {filtered.length > 80 && (
-        <p className="text-center text-xs font-bold text-gray-400 py-4">
-          Showing top 80 matches. Refine your search query to see specific words!
-        </p>
+      {filtered.length > displayLimit && (
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 py-6">
+          <button
+            onClick={() => setDisplayLimit((prev) => prev + 80)}
+            className="px-5 py-2.5 rounded-2xl bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 text-xs font-black text-gray-700 dark:text-gray-200 hover:border-[#1CB0F6] transition shadow-sm"
+          >
+            Load Next 80 Words ({Math.min(displayLimit + 80, filtered.length)} of {filtered.length})
+          </button>
+          <button
+            onClick={() => setDisplayLimit(filtered.length)}
+            className="px-5 py-2.5 rounded-2xl bg-[#1CB0F6] text-white text-xs font-black hover:bg-[#1899D6] transition shadow-sm"
+          >
+            Show All {filtered.length} Words
+          </button>
+        </div>
       )}
     </div>
   );
