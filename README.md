@@ -119,12 +119,31 @@ flowchart TD
 
 | Mode | Strategy Focus | GRE Application |
 | :--- | :--- | :--- |
+| **Historical Story Drills** | Narrative contextual immersion (Sets 1 & 2) | Reading comprehension & GRE vocabulary in context |
 | **Polarity Math** | Classify connotations into `+`, `-`, or `0` | Algebraic elimination in Text Completion |
 | **Synonym Clusters** | Pair cross-set twins (*laconic* <-> *taciturn*) | Sentence Equivalence (finding twin pairs) |
 | **Antonym Traps** | Dissect extreme opposites and contrasting meanings | Identifying contrast transitions (`although`, `despite`) |
 | **Dual-Blank Context** | Fill-in-the-blank contextual drills | Real GRE Sentence Equivalence & Text Completion |
 | **Weak Words Hospital** | Intensive rehabilitation of missed words | Eliminates blind spots (0 hearts lost) |
 | **Speed Blitz** | 60-second rapid-fire active recall sprints | Fluency under GRE 30-minute section time pressure |
+
+---
+
+## Historical Story Drills (Sets 1 & 2 Exclusives)
+
+VocabEz introduces an immersive story-based learning experience specifically designed for Set 1 and Set 2. Instead of isolated flashcards, learners read gripping, historically authentic narratives that weave in all 30 target words, followed by interactive quizzes testing both historical comprehension and vocabulary mastery:
+
+### Set 1: The Twilight of the Republic (Rome, 44 BCE)
+- **Narrative Focus:** Follows the final months of the Roman Republic, Julius Caesar's perpetual dictatorship, the philosophical anguish of Marcus Tullius Cicero, and the conspiracy led by Marcus Junius Brutus on the Ides of March.
+- **Vocabulary Coverage:** All 30 words of Set 1 (*austere*, *abound*, *homogeneous*, *amorphous*, *conspicuous*, *belie*, *daunting*, *humdrum*, *obsequious*, *deify*, *capricious*, *wary*, *loquacious*, *didactic*, *taciturn*, *cerebral*, *congenial*, *proclivity*, *spendthrift*, *puerile*, *misanthropic*, *negligent*, *feasible*, *quixotic*, *misnomer*, *cursory*, *flout*, *disseminate*, *insipid*, *placate*).
+- **Interactive Quizzes (20 Questions):** 10 questions on historical events (Cicero's silence, Artemidorus's warning scroll, Antony's funeral oration) and 10 questions testing contextual vocabulary.
+- **Route:** [vocabez.vercel.app/story/1](https://vocabez.vercel.app/story/1)
+
+### Set 2: The Trial of Galileo Galilei (Florence & Rome, 1610-1633)
+- **Narrative Focus:** Chronicles the dawn of the Scientific Revolution: Galileo's 1610 telescope in Padua, discovering Jupiter's moons, the patron friendship of Pope Urban VIII, and the dramatic 1633 trial by the Roman Inquisition culminating in his forced abjuration (*"Eppur si muove"*).
+- **Vocabulary Coverage:** All 30 words of Set 2 (*deft*, *derivative*, *alacrity*, *advocate*, *anachronistic*, *ameliorate*, *audacious*, *aggrandize*, *banal*, *diatribe*, *adulterate*, *candid*, *construe*, *incredulous*, *ambivalent*, *amenable*, *demur*, *decorum*, *benign*, *ingenuous*, *brazen*, *caustic*, *avaricious*, *covet*, *calumny*, *desiccate*, *craven*, *convoluted*, *castigate*, *contrite*).
+- **Interactive Quizzes (20 Questions):** 10 questions on historical discoveries (Sidereus Nuncius, the Medicean Stars, the Letter to Christina, Urban VIII's Simplicio reaction) and 10 questions testing contextual vocabulary.
+- **Route:** [vocabez.vercel.app/story/2](https://vocabez.vercel.app/story/2)
 
 ---
 
@@ -168,6 +187,7 @@ VocabEz/
 |   |   |-- practice/page.tsx        # "Practice Anything Anytime" Strategy Hub
 |   |   |-- session/[mode]/page.tsx  # Gamified Interactive Quiz Engine
 |   |   |-- words/page.tsx           # Searchable 810-Word Bank + Audio
+|   |   |-- story/[set]/page.tsx     # Historical Narrative & Story Quiz Engine
 |   |   |-- profile/page.tsx         # User Stats, XP, Streaks & Accuracy
 |   |   |-- login/page.tsx           # Supabase Auth Login
 |   |   |-- signup/page.tsx          # Supabase Auth Registration
@@ -177,7 +197,8 @@ VocabEz/
 |   |   |-- navigation/              # Sidebar, TopNav, MobileNav
 |   |   `-- ui/                      # Button3D, GuestWarningBanner
 |   |-- data/
-|   |   `-- enrichedVocab.json       # 810 Normalized GregMAT Words (Sets 1-27)
+|   |   |-- enrichedVocab.json       # 810 Normalized GregMAT Words (Sets 1-27)
+|   |   `-- historicalStories.ts     # Authentic Narratives & 40 Story Quizzes (Sets 1 & 2)
 |   |-- lib/
 |   |   |-- guestStorage.ts          # LocalStorage Engine + Supabase Cloud Sync
 |   |   |-- questionEngine.ts        # Dynamic GRE Question Generator

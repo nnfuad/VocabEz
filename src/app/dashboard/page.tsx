@@ -171,13 +171,21 @@ export default function DashboardPage() {
                     </Link>
 
                     {/* Label Pill */}
-                    <div className="mt-2 text-center">
+                    <div className="mt-2 text-center flex flex-col items-center">
                       <span className="inline-block px-3 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full text-xs font-black shadow-sm text-gray-800 dark:text-gray-200">
                         Set {set.setNum}
                       </span>
                       <p className="text-[10px] text-gray-500 font-bold max-w-[120px] truncate mt-0.5">
                         {set.sampleWords.slice(0, 2).join(', ')}...
                       </p>
+                      {(set.setNum === 1 || set.setNum === 2) && (
+                        <Link
+                          href={`/story/${set.setNum}`}
+                          className="mt-1.5 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-100 hover:bg-amber-200 dark:bg-amber-950/60 dark:hover:bg-amber-900/60 text-amber-800 dark:text-amber-200 text-[10px] font-black uppercase tracking-wider transition shadow-sm border border-amber-300 dark:border-amber-700"
+                        >
+                          <BookOpen className="w-3 h-3 text-amber-600 dark:text-amber-400" /> Story & Quiz
+                        </Link>
+                      )}
                     </div>
                   </div>
                 );
