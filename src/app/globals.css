@@ -50,3 +50,27 @@ body {
 .animate-bounce-subtle {
   animation: bounceSubtle 2s infinite ease-in-out;
 }
+
+/* Mobile & Touch Ergonomics */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.scroll-touch {
+  -webkit-overflow-scrolling: touch;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.tap-tactile {
+  transition: transform 0.08s ease, filter 0.08s ease;
+}
+.tap-tactile:active {
+  transform: scale(0.96);
+}

@@ -30,7 +30,7 @@ export default function RootLayout({
           <Sidebar />
 
           {/* Main Content Area */}
-          <div className="flex-1 flex flex-col min-w-0 pb-24 md:pb-8">
+          <div className="flex-1 flex flex-col min-w-0 pb-[max(6rem,calc(5rem+env(safe-area-inset-bottom)))] md:pb-8">
             <TopNav />
             <main className="flex-1 px-3 py-4 md:p-6 max-w-5xl mx-auto w-full">
               {children}

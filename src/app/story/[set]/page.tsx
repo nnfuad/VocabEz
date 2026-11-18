@@ -320,6 +320,19 @@ export default function HistoricalStoryPage() {
               Start Story Quizzes Now <ArrowRight className="w-5 h-5 ml-1" />
             </Button3D>
           </div>
+
+          {/* Mobile Floating Action Button to Jump to Quiz */}
+          <div className="sm:hidden fixed bottom-20 left-4 right-4 z-30 pointer-events-auto">
+            <button
+              onClick={() => {
+                setActiveTab('quiz');
+                restartQuiz();
+              }}
+              className="w-full py-3 px-4 rounded-2xl bg-[#58CC02] hover:bg-[#46A302] text-white text-xs font-black uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg border-b-4 border-[#3F8500] tap-tactile active:translate-y-1"
+            >
+              <HelpCircle className="w-4 h-4" /> Start Story Quiz (20 Qs) <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
         </div>
       )}
 
@@ -541,10 +554,15 @@ export default function HistoricalStoryPage() {
         </div>
       )}
 
-      {/* INTERACTIVE VOCABULARY MODAL / POPUP */}
+      {/* INTERACTIVE VOCABULARY MODAL / BOTTOM SHEET */}
       {selectedWord && (
-        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in">
-          <div className="bg-white dark:bg-[#202F36] border-2 border-gray-200 dark:border-gray-700 rounded-3xl p-6 max-w-md w-full shadow-2xl space-y-4 relative animate-pop">
+        <div
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setSelectedWord(null);
+          }}
+          className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-end sm:items-center justify-center p-0 sm:p-4 animate-in fade-in"
+        >
+          <div className="bg-white dark:bg-[#202F36] border-t-4 sm:border-2 border-gray-200 dark:border-gray-700 rounded-t-3xl sm:rounded-3xl p-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] sm:pb-6 max-w-md w-full shadow-2xl space-y-4 relative animate-pop max-h-[85vh] overflow-y-auto">
             {/* Close button */}
             <button
               onClick={() => setSelectedWord(null)}

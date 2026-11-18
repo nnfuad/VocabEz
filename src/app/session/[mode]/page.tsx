@@ -441,7 +441,7 @@ export default function SessionRunnerPage({
       </div>
 
       {/* Sticky Bottom Action Sheet */}
-      <div className="pt-4 border-t-2 border-gray-100 dark:border-gray-800">
+      <div className="pt-4 border-t-2 border-gray-100 dark:border-gray-800 pb-[max(1rem,env(safe-area-inset-bottom))]">
         {answerState === 'idle' ? (
           <Button3D
             variant="green"

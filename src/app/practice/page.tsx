@@ -176,7 +176,7 @@ export default function PracticeHubPage() {
         </div>
 
         {/* Scrollable Set Chips */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none">
+        <div className="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar scroll-touch">
           <button
             onClick={() => setSelectedSet('all')}
             className={`px-3 py-1.5 rounded-xl text-xs font-black whitespace-nowrap transition-all border-b-2 ${

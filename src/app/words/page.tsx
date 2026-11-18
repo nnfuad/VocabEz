@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Search, Volume2, Sparkles, Filter, BookOpen } from 'lucide-react';
+import { Search, Volume2, Sparkles, Filter, BookOpen, X } from 'lucide-react';
 import enrichedVocabData from '@/data/enrichedVocab.json';
 import { EnrichedVocabWord, Connotation } from '@/types/vocab';
 
@@ -59,12 +59,20 @@ export default function WordsDirectoryPage() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search words or definitions (e.g. loquacious, strict, placate)..."
-            className="w-full pl-11 pr-4 py-2.5 rounded-2xl border-2 border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm font-bold text-gray-900 dark:text-white focus:outline-none focus:border-[#1CB0F6]"
+            className="w-full pl-11 pr-10 py-2.5 rounded-2xl border-2 border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm font-bold text-gray-900 dark:text-white focus:outline-none focus:border-[#1CB0F6]"
           />
+          {search && (
+            <button
+              onClick={() => setSearch('')}
+              className="absolute right-3.5 top-1/2 -translate-y-1/2 p-1 rounded-full text-gray-400 hover:text-gray-600 dark:hover:text-gray-200"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          )}
         </div>
 
         {/* Set Filter Pills */}
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none text-xs font-black">
+        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar scroll-touch text-xs font-black">
           <span className="text-gray-400 mr-1 whitespace-nowrap">Set:</span>
           <button
             onClick={() => setSelectedSet('all')}

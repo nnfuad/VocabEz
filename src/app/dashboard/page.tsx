@@ -129,21 +129,29 @@ export default function DashboardPage() {
             </div>
 
             {/* Stepping Path Nodes */}
-            <div className="relative flex flex-col items-center py-2 space-y-6">
+            <div className="relative flex flex-col items-center py-4 space-y-7">
               {unit.sets.map((set, idx) => {
                 const isCompleted = completedSets.includes(set.setNum);
                 const isCurrent = set.setNum === nextSet;
                 const isLocked = !isCompleted && !isCurrent;
 
-                // Alternate X offsets for zig-zag stepping stones like Duolingo
-                // On mobile, reduce offset so it never overflows narrow screens!
-                const desktopOffsets = [0, 45, -45, 30, -30, 50, 0, -40, 40];
-                const mobileOffsets = [0, 25, -25, 18, -18, 28, 0, -22, 22];
+                // Authentic Duolingo winding serpentine wave
+                const waveClasses = [
+                  'translate-x-0',
+                  'translate-x-4 sm:translate-x-10',
+                  'translate-x-7 sm:translate-x-16',
+                  'translate-x-4 sm:translate-x-10',
+                  'translate-x-0',
+                  '-translate-x-4 sm:-translate-x-10',
+                  '-translate-x-7 sm:-translate-x-16',
+                  '-translate-x-4 sm:-translate-x-10',
+                ];
+                const waveClass = waveClasses[idx % waveClasses.length];
 
                 return (
                   <div
                     key={set.setNum}
-                    className="flex flex-col items-center relative group"
+                    className={`flex flex-col items-center relative group transition-transform duration-200 ${waveClass}`}
                   >
                     {/* Active Ripple */}
                     {isCurrent && (
