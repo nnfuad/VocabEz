@@ -512,7 +512,7 @@ export default function SessionRunnerPage({
                     setOutOfHearts(false);
                     setStats(guestStorage.getStats());
                   } else {
-                    router.push('/practice?strategy=hospital_weak');
+                    router.push('/hospital');
                   }
                 }}
               >

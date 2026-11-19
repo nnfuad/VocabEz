@@ -16,7 +16,7 @@ export const MobileNav: React.FC = () => {
   const navItems = [
     { label: 'Path', href: '/dashboard', icon: Compass },
     { label: 'Practice', href: '/practice', icon: Zap },
-    { label: 'Hospital', href: '/practice?strategy=hospital_weak', icon: ShieldAlert },
+    { label: 'Hospital', href: '/hospital', icon: ShieldAlert },
     { label: '810 Words', href: '/words', icon: BookOpen },
     { label: 'Profile', href: '/profile', icon: User },
   ];

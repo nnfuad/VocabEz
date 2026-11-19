@@ -203,6 +203,7 @@ VocabEz/
 |   |-- app/
 |   |   |-- dashboard/page.tsx       # 27-Set Stepping Stone Roadmap
 |   |   |-- practice/page.tsx        # "Practice Anything Anytime" Strategy Hub
+|   |   |-- hospital/page.tsx        # Weak Words Hospital Triage & Discharge Ward
 |   |   |-- session/[mode]/page.tsx  # Gamified Interactive Quiz Engine
 |   |   |-- words/page.tsx           # Searchable 810-Word Bank + Audio
 |   |   |-- story/[set]/page.tsx     # Historical Narrative & Story Quiz Engine

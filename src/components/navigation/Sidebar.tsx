@@ -31,7 +31,7 @@ export const Sidebar: React.FC = () => {
   const navItems = [
     { label: 'Learn (Path)', href: '/dashboard', icon: Compass },
     { label: 'Practice Hub', href: '/practice', icon: Zap },
-    { label: 'Weak Words Hospital', href: '/practice?strategy=hospital_weak', icon: ShieldAlert },
+    { label: 'Weak Words Hospital', href: '/hospital', icon: ShieldAlert },
     { label: 'All 810 Words', href: '/words', icon: BookOpen },
     { label: 'Profile & Progress', href: '/profile', icon: User },
   ];

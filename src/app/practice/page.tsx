@@ -302,13 +302,32 @@ export default function PracticeHubPage() {
               </div>
 
               <div className="mt-5 pt-4 border-t border-gray-100 dark:border-gray-800">
-                <Link href={`/session/${strat.id}?${queryParam}`}>
-                  <Button3D variant="green" fullWidth size="md">
-                    <span className="flex items-center justify-center gap-2">
-                      Start Session <ArrowRight className="w-4 h-4 stroke-[3]" />
-                    </span>
-                  </Button3D>
-                </Link>
+                {strat.id === 'hospital_weak' ? (
+                  <div className="flex items-center gap-2">
+                    <Link href="/hospital" className="flex-1">
+                      <Button3D variant="red" fullWidth size="md">
+                        <span className="flex items-center justify-center gap-1.5 text-xs">
+                          <ShieldAlert className="w-4 h-4" /> Hospital Ward
+                        </span>
+                      </Button3D>
+                    </Link>
+                    <Link href={`/session/hospital_weak`} className="flex-1">
+                      <Button3D variant="green" fullWidth size="md">
+                        <span className="flex items-center justify-center gap-1.5 text-xs">
+                          Quick Drill <ArrowRight className="w-3.5 h-3.5" />
+                        </span>
+                      </Button3D>
+                    </Link>
+                  </div>
+                ) : (
+                  <Link href={`/session/${strat.id}?${queryParam}`}>
+                    <Button3D variant="green" fullWidth size="md">
+                      <span className="flex items-center justify-center gap-2">
+                        Start Session <ArrowRight className="w-4 h-4 stroke-[3]" />
+                      </span>
+                    </Button3D>
+                  </Link>
+                )}
               </div>
             </div>
           );

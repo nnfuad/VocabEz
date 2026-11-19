@@ -218,6 +218,40 @@ export const guestStorage = {
     return true;
   },
 
+  removeWeakWord(wordId: string): UserStats {
+    const stats = this.getStats();
+    const updated = {
+      ...stats,
+      weakWordIds: stats.weakWordIds.filter((id) => id !== wordId),
+    };
+    this.saveStats(updated);
+    this.syncToSupabaseIfLoggedIn(updated);
+    return updated;
+  },
+
+  clearWeakWords(): UserStats {
+    const stats = this.getStats();
+    const updated = {
+      ...stats,
+      weakWordIds: [],
+    };
+    this.saveStats(updated);
+    this.syncToSupabaseIfLoggedIn(updated);
+    return updated;
+  },
+
+  addWeakWord(wordId: string): UserStats {
+    const stats = this.getStats();
+    if (stats.weakWordIds.includes(wordId)) return stats;
+    const updated = {
+      ...stats,
+      weakWordIds: [...stats.weakWordIds, wordId],
+    };
+    this.saveStats(updated);
+    this.syncToSupabaseIfLoggedIn(updated);
+    return updated;
+  },
+
   async syncToSupabaseIfLoggedIn(stats: UserStats) {
     if (typeof window === 'undefined') return;
     try {
