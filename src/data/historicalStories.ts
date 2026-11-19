@@ -21,7 +21,7 @@ export interface StoryParagraph {
 }
 
 export interface HistoricalStory {
-  setNumber: 1 | 2 | 4 | 5;
+  setNumber: 1 | 2 | 3 | 4 | 5;
   title: string;
   subtitle: string;
   historicalPeriod: string;
@@ -34,8 +34,8 @@ export interface HistoricalStory {
   questions: StoryQuizQuestion[];
 }
 
-export const HISTORICAL_STORIES: Record<1 | 2 | 4 | 5, HistoricalStory> = {
- 1: {
+export const HISTORICAL_STORIES: Record<1 | 2 | 3 | 4 | 5, HistoricalStory> = {
+1: {
   "setNumber": 1,
   "title": "The Twilight of the Republic: Cicero, Caesar, and the Ides of March (44 BCE)",
   "subtitle": "Experience the betrayal, philosophy, and collapse of Roman democracy through all 30 Set 1 vocabulary words.",
@@ -1517,6 +1517,743 @@ export const HISTORICAL_STORIES: Record<1 | 2 | 4 | 5, HistoricalStory> = {
   ]
 }
 ,
+  3: {
+  "setNumber": 3,
+  "title": "Crowned Isles: Civil War, the Boyne, and the Union of Three Kingdoms (1642–1801)",
+  "subtitle": "Walk the contested hills of Marston Moor, the ramparts of Derry, the blood-soaked heather of Culloden, and the halls of Westminster as England, Scotland, and Ireland clash and coalesce to forge the United Kingdom.",
+  "historicalPeriod": "1642 – 1801 CE (Three Kingdoms, Glorious Revolution & Acts of Union)",
+  "readTimeMinutes": 10,
+  "heroBadge": "British & Irish History",
+  "introSummary": "For centuries, the British archipelago was an uneasy constellation of distinct crowns, competing parliaments, and fiercely rival faiths. From the scaffold of King Charles I in Whitehall to Oliver Cromwell's devastating conquest of Ireland, from the dramatic crossing of the Boyne to the highland catastrophe at Culloden and the insurrection of Wolfe Tone, four nations—English, Scottish, Irish, and Welsh—fought over sovereignty, liberty, and memory. This epic chronicle follows royalists, covenanters, Gaelic rebels, and Westminster philosophers as their disparate kingdoms were forged into a modern constitutional state.",
+  "keyFigures": [
+    {
+      "name": "Oliver Cromwell",
+      "role": "Puritan general and Lord Protector who defeated Charles I and led the brutal conquest of Ireland"
+    },
+    {
+      "name": "William III of Orange",
+      "role": "Dutch stadtholder invited to England in 1688, whose victory at the Boyne sealed Protestant succession"
+    },
+    {
+      "name": "Prince Charles Edward Stuart",
+      "role": "'Bonnie Prince Charlie', who led the fateful 1745 Jacobite Uprising across Scotland"
+    },
+    {
+      "name": "Edmund Burke",
+      "role": "Dublin-born philosopher and British MP who championed Irish Catholic relief and constitutional order"
+    },
+    {
+      "name": "Theobald Wolfe Tone",
+      "role": "Founder of the Society of United Irishmen and leader of the 1798 Irish Rebellion"
+    }
+  ],
+  "paragraphs": [
+    {
+      "id": 1,
+      "subtitle": "I. The Shattered Crown and the Scaffold (1642–1649)",
+      "text": "When King Charles I raised his royal standard at Nottingham in 1642, he plunged England, Scotland, and Ireland into fratricidal war. Parliament condemned the prodigal expenditures of the Stuart court and the king's insistence on divine prerogative. Across bloody battlefields from Marston Moor to Naseby, Oliver Cromwell's New Model Army triumphed. When the High Court of Justice issued a formal censure condemning Charles as a tyrant and traitor, royalist loyalists wept, viewing the execution as a sacrilege and seeking to canonize the fallen king as an immortal Christian martyr.",
+      "targetWords": [
+        "prodigal",
+        "censure",
+        "canonize"
+      ]
+    },
+    {
+      "id": 2,
+      "subtitle": "II. The Puritan Iron and the Wounds of Ireland (1649–1653)",
+      "text": "Flushed with victory in England, Cromwell sailed for Ireland in August 1649 with nine thousand ironclad soldiers. Guided by an ascetic Puritan theology that viewed Catholic worship as idolatry, his forces breached Drogheda and Wexford, executing defenders and non-combatants. The campaign intensified an ancient sectarian antipathy that poisoned relations for generations. Irish landowners were forcibly driven west 'to Hell or Connacht' in an arduous winter expulsion that transferred millions of fertile acres to English Protestant settlers.",
+      "targetWords": [
+        "ascetic",
+        "antipathy",
+        "arduous"
+      ]
+    },
+    {
+      "id": 3,
+      "subtitle": "III. Restoration Shadows and the Bucolic Façade (1660–1685)",
+      "text": "The Commonwealth collapsed under the weight of its own military dictatorship, paving the way for Charles II to return from exile in 1660. Across the shires, landowners celebrated a return to bucolic rhythms, enjoying parish festivals, horse racing, and country sports. Charles attempted to assuage the bitter religious grievances dividing Anglicans, Puritans, and Catholics, yet court life remained turbulent. Beneath the king's artless wit and relaxed charm lay secret treaties with France and hidden subsidies from Louis XIV that alarmed Westminster.",
+      "targetWords": [
+        "bucolic",
+        "assuage",
+        "artless"
+      ]
+    },
+    {
+      "id": 4,
+      "subtitle": "IV. The Glorious Revolution and the Waters of the Boyne (1688–1690)",
+      "text": "When Charles's openly Catholic brother James II ascended the throne and produced a male heir, seven English peers invited William of Orange to intervene. James fled to France, while in Ireland his Catholic Jacobite army gathered to fight. At the River Boyne on July 1, 1690, William's multilingual coalition faced James across the water. Amid the cacophonous thunder of Dutch, English, and French cannons, William prevailed. Victorious Protestants demanded Catholics abjure their allegiance to the Stuart dynasty, establishing Penal Laws that served to polarize Irish society along sectarian fault lines for more than a century.",
+      "targetWords": [
+        "cacophonous",
+        "abjure",
+        "polarize"
+      ]
+    },
+    {
+      "id": 5,
+      "subtitle": "V. The Treaty of Union: Scotland and England Join (1707)",
+      "text": "In the dawn of the eighteenth century, Scotland faced economic ruin following the catastrophic collapse of its Darien colonial venture in Central America. Recognizing shared strategic threats from France, English and Scottish commissioners negotiated to coalesce their sovereign realms into the Kingdom of Great Britain. While Edinburgh preserved its Presbyterian Kirk, Scottish legal code, and universities, it surrendered its independent parliament. The union was an anomalous constitutional partnership: English politicians showed little deference to Highland sensitivities, yet it unlocked vast transatlantic trade for Glasgow merchants.",
+      "targetWords": [
+        "coalesce",
+        "anomalous",
+        "deference"
+      ]
+    },
+    {
+      "id": 6,
+      "subtitle": "VI. Georgian Stability and Parliamentary Chicanery (1714–1742)",
+      "text": "With the accession of George I from Hanover, Great Britain entered an era of booming commerce and political consolidation. Sir Robert Walpole became Britain's first de facto Prime Minister, mastering political chicanery, crown patronage, and backroom bribery to manage the House of Commons. London transformed into a dazzling, cosmopolitan metropolis where merchants, foreign ambassadors, and writers mingled in vibrant coffeehouses. Under domestic peace and maritime expansion, trade and manufacturing began to burgeon across Lancashire and the Midlands.",
+      "targetWords": [
+        "chicanery",
+        "cosmopolitan",
+        "burgeon"
+      ]
+    },
+    {
+      "id": 7,
+      "subtitle": "VII. The Heather on Fire: Culloden and the Highland Dirge (1745–1746)",
+      "text": "In the summer of 1745, Prince Charles Edward Stuart—Bonnie Prince Charlie—landed in the Hebrides to reclaim the British crown for his exiled father. Rallying highland clans, the Jacobites captured Edinburgh and marched boldly into England. Yet senior commanders proved diffident when expected English support failed to materialize, choosing to retreat northward. On April 16, 1746, on the desolate bog of Culloden Moor, British artillery shredded the highland charge. Government brutality did not abate after the battle: the Duke of Cumberland oversaw desultory mopping-up raids that banned tartans, confiscated arms, and ended the ancient clan system forever.",
+      "targetWords": [
+        "diffident",
+        "abate",
+        "desultory"
+      ]
+    },
+    {
+      "id": 8,
+      "subtitle": "VIII. Edmund Burke and the Moral Weight of Empire (1770s–1790s)",
+      "text": "In the vaulted chamber of Westminster, Dublin-born Member of Parliament Edmund Burke emerged as the intellectual giant of the age. Burke delivered cogent speeches urging conciliation with the American colonists and championing the emancipation of oppressed Irish Catholics. In an age of shallow slogans, his philosophical writings presented a compelling defense of historical continuity, constitutional checks, and moral stewardship. Though critics complained that his speeches were verbose and exhausting, his defense of ordered liberty against radical jacobinism shaped modern political philosophy.",
+      "targetWords": [
+        "cogent",
+        "compelling",
+        "verbose"
+      ]
+    },
+    {
+      "id": 9,
+      "subtitle": "IX. The Rising of 1798: The Green Flag of Wolfe Tone",
+      "text": "Inspired by the French and American Revolutions, Dublin lawyer Theobald Wolfe Tone founded the Society of United Irishmen in Belfast, seeking to unite Catholic, Protestant, and Dissenter against British colonial misrule. In 1798, rebellion erupted across Wexford, Mayo, and Ulster. Tone secured French naval armadas to assist the uprising, but British intelligence managed to betray conspirators before key garrisons could be seized. Crown authorities maintained copious dossiers on rebel networks, countering the insurgency with ruthless militia sweeps after dilatory French reinforcements arrived too late.",
+      "targetWords": [
+        "betray",
+        "copious",
+        "dilatory"
+      ]
+    },
+    {
+      "id": 10,
+      "subtitle": "X. The Act of Union and the Unsettled Empire (1800–1801)",
+      "text": "Shaken by the 1798 uprising, Prime Minister William Pitt the Younger resolved that Ireland must be directly absorbed into the British state. Through massive bribes and peerages, the Dublin Parliament voted for its own dissolution, creating the United Kingdom of Great Britain and Ireland on January 1, 1801. Yet King George III refused to assuage Irish fury, choosing to equivocate and block promised Catholic political emancipation. Irish patriots and Westminster reformers would continue to contend over the Union for over a century, navigating arcane imperial statutes until twenty-six counties broke away to form the Irish Free State.",
+      "targetWords": [
+        "equivocate",
+        "contend",
+        "arcane"
+      ]
+    }
+  ],
+  "allTargetWords": [
+    "abate",
+    "abjure",
+    "anomalous",
+    "antipathy",
+    "arcane",
+    "arduous",
+    "artless",
+    "ascetic",
+    "assuage",
+    "betray",
+    "bucolic",
+    "burgeon",
+    "cacophonous",
+    "canonize",
+    "censure",
+    "chicanery",
+    "coalesce",
+    "cogent",
+    "compelling",
+    "contend",
+    "copious",
+    "cosmopolitan",
+    "deference",
+    "desultory",
+    "diffident",
+    "dilatory",
+    "equivocate",
+    "polarize",
+    "prodigal",
+    "verbose"
+  ],
+  "questions": [
+    {
+      "id": "set3-q1",
+      "category": "historical_fact",
+      "prompt": "Which major conflict led to the trial and execution of King Charles I in London in January 1649?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The English Civil War (Wars of the Three Kingdoms)",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "The War of the Spanish Succession",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "The Hundred Years' War",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "The Jacobite Rebellion",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The English Civil War (1642–1651) between Royalist Cavaliers and Parliamentarian Roundheads culminated in the capture, trial, and beheading of Charles I for high treason outside the Banqueting House in Whitehall."
+    },
+    {
+      "id": "set3-q2",
+      "category": "historical_fact",
+      "prompt": "Who commanded the Parliamentary invasion of Ireland in 1649 that resulted in brutal sieges at Drogheda and Wexford?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Oliver Cromwell",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "The Duke of Wellington",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Sir Walter Raleigh",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "William of Orange",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Oliver Cromwell led the New Model Army into Ireland in 1649, conducting severe sieges and confiscating millions of acres of Catholic-owned land under the Act for the Settlement of Ireland 1652."
+    },
+    {
+      "id": "set3-q3",
+      "category": "historical_fact",
+      "prompt": "What was the landmark 1688 event that replaced the Catholic King James II with William III and Mary II?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The Glorious Revolution",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "The Gunpowder Plot",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "The Peterloo Massacre",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "The English Reformation",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The Glorious Revolution of 1688 deposed King James II in favor of his Protestant daughter Mary and her Dutch husband William III of Orange, establishing the supremacy of Parliament via the 1689 Bill of Rights."
+    },
+    {
+      "id": "set3-q4",
+      "category": "historical_fact",
+      "prompt": "At which decisive battle in Ireland in July 1690 did William III defeat the forces of the deposed James II?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The Battle of the Boyne",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "The Battle of Hastings",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "The Battle of Bannockburn",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "The Battle of Flodden",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Fought along the River Boyne near Drogheda on July 1, 1690, the Battle of the Boyne saw William III's allied army defeat James II, solidifying Protestant political ascendancy in Ireland."
+    },
+    {
+      "id": "set3-q5",
+      "category": "historical_fact",
+      "prompt": "What legislation in 1707 united the separate kingdoms of England and Scotland into Great Britain?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The Acts of Union 1707",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "The Magna Carta",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "The Treaty of Utrecht",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "The Reform Act 1832",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Passed by both the Parliament of England and the Parliament of Scotland, the Acts of Union took effect on May 1, 1707, dissolving both parliaments and creating a single Parliament of Great Britain at Westminster."
+    },
+    {
+      "id": "set3-q6",
+      "category": "historical_fact",
+      "prompt": "What failed Scottish colonial venture in Panama (1698–1700) contributed to Scotland's financial agreement to unite with England?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The Darien Scheme",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "The East India Company",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "The Hudson's Bay Venture",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "The Roanoke Colony",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The Darien Scheme was an ambitious attempt by the Kingdom of Scotland to establish an overland trade colony on the Isthmus of Panama; its catastrophic failure wiped out an estimated quarter of Scotland's liquid wealth."
+    },
+    {
+      "id": "set3-q7",
+      "category": "historical_fact",
+      "prompt": "What was the final battle of the 1745 Jacobite Rising, in which Bonnie Prince Charlie's Highland army was crushed in 1746?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The Battle of Culloden",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "The Battle of Dunbar",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "The Battle of Prestonpans",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "The Battle of Killiecrankie",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "On April 16, 1746, near Inverness, the British Army under the Duke of Cumberland routed the Jacobite forces in under an hour at Culloden Moor, marking the final pitched battle fought on British soil."
+    },
+    {
+      "id": "set3-q8",
+      "category": "historical_fact",
+      "prompt": "Which influential Anglo-Irish thinker and Westminster MP authored 'Reflections on the Revolution in France' (1790)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Edmund Burke",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Jonathan Swift",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Thomas Paine",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Adam Smith",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Edmund Burke, an Irish-born Whig statesman, famously defended constitutional traditions, cautioned against ideological zeal, and advocated for Catholic relief and American conciliation."
+    },
+    {
+      "id": "set3-q9",
+      "category": "historical_fact",
+      "prompt": "Who founded the Society of United Irishmen in 1791 to unite Catholics and Protestants in establishing an independent Irish republic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Theobald Wolfe Tone",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Daniel O'Connell",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Charles Stewart Parnell",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Robert Emmet",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Wolfe Tone, a Protestant barrister from Dublin, championed the unity of all Irishmen regardless of sect and led the 1798 Rebellion with French naval assistance, becoming known as the Father of Irish Republicanism."
+    },
+    {
+      "id": "set3-q10",
+      "category": "historical_fact",
+      "prompt": "When did the Act of Union take effect that merged Great Britain and Ireland into the United Kingdom of Great Britain and Ireland?",
+      "options": [
+        {
+          "id": "a",
+          "text": "January 1, 1801",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "July 4, 1776",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "May 1, 1707",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "December 6, 1922",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Passed in response to the 1798 Rebellion, the Acts of Union 1800 came into force on January 1, 1801, uniting the Kingdom of Great Britain and the Kingdom of Ireland with a combined Union flag."
+    },
+    {
+      "id": "set3-q11",
+      "category": "vocab_in_context",
+      "targetWord": "prodigal",
+      "prompt": "In Paragraph 1, Parliament condemned the 'prodigal expenditures of the Stuart court'. What does 'prodigal' mean?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Spending money or using resources freely, recklessly, and wastefully",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Extremely frugal, thrifty, and economical",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Secretive and hidden from public view",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Strictly limited by constitutional statute",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Prodigal' means recklessly extravagant, wasteful with money or resources, or spending on a lavish, uncontrolled scale."
+    },
+    {
+      "id": "set3-q12",
+      "category": "vocab_in_context",
+      "targetWord": "ascetic",
+      "prompt": "In Paragraph 2, Cromwell was guided by an 'ascetic Puritan theology'. What is the meaning of 'ascetic'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Characterized by severe self-discipline and abstention from indulgences or worldly pleasures",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Fond of lavish feasts and luxurious decorations",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Confused, disoriented, and poorly organized",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Indifferent to all moral or religious principles",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Ascetic' describes strict self-discipline and avoidance of physical pleasures or indulgences, often for religious devotion."
+    },
+    {
+      "id": "set3-q13",
+      "category": "vocab_in_context",
+      "targetWord": "antipathy",
+      "prompt": "In Paragraph 2, Cromwell's campaign intensified an ancient 'sectarian antipathy'. What does 'antipathy' mean?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A deep-seated, intense feeling of aversion or hostility",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "A mutual admiration and brotherly affection",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "An artistic style of decorative painting",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "A legal contract granting land tenure",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Antipathy' refers to a deep, ingrained feeling of hostility, aversion, or strong opposition."
+    },
+    {
+      "id": "set3-q14",
+      "category": "vocab_in_context",
+      "targetWord": "bucolic",
+      "prompt": "In Paragraph 3, landowners celebrated a return to 'bucolic rhythms'. What does 'bucolic' signify?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Relating to the pleasant, peaceful aspects of the countryside and rural life",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Industrial, noisy, and factory-centered",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Gloomy, dark, and depressive",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Military, regimented, and martial",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Bucolic' pertains to idyllic countryside life, pastoral pastures, and tranquil rural scenery."
+    },
+    {
+      "id": "set3-q15",
+      "category": "vocab_in_context",
+      "targetWord": "abjure",
+      "prompt": "In Paragraph 4, victorious Protestants demanded Catholics 'abjure their allegiance'. What does 'abjure' mean?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Solemnly renounce, reject, or swear to abandon a belief, claim, or loyalty",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Reaffirm with passionate loyalty and dedication",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Translate into a foreign language",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Celebrate with public parades",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Abjure' means to formally and solemnly renounce, repudiate, or recant an oath, belief, or allegiance."
+    },
+    {
+      "id": "set3-q16",
+      "category": "vocab_in_context",
+      "targetWord": "polarize",
+      "prompt": "In Paragraph 4, the Penal Laws served to 'polarize Irish society'. What is the meaning of 'polarize'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "To divide into two sharply contrasting, hostile groups or opinions",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "To bring people together in harmonious compromise",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "To navigate across the icy Arctic ocean",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "To enrich financially through commercial trade",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Polarize' means to cause individuals or groups to separate into deeply opposing, sharply contrasted camps."
+    },
+    {
+      "id": "set3-q17",
+      "category": "vocab_in_context",
+      "targetWord": "coalesce",
+      "prompt": "In Paragraph 5, commissioners negotiated to 'coalesce their sovereign realms'. What does 'coalesce' mean?",
+      "options": [
+        {
+          "id": "a",
+          "text": "To come together, unite, or merge to form one unified whole",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "To violently fracture into tiny fragments",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "To declare war without advance warning",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "To delay an agreement indefinitely",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Coalesce' means to blend, fuse, or come together into a single cohesive entity or body."
+    },
+    {
+      "id": "set3-q18",
+      "category": "vocab_in_context",
+      "targetWord": "chicanery",
+      "prompt": "In Paragraph 6, Robert Walpole was noted for his mastery of 'political chicanery'. What does 'chicanery' mean?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The use of deception, clever trickery, or underhanded subterfuge to achieve an end",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Uncompromising honesty, integrity, and transparency",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Physical bravery and chivalric knightly conduct",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Scientific observation and mathematical calculation",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Chicanery' denotes clever trickery, deceptive maneuvers, or underhanded political maneuvering."
+    },
+    {
+      "id": "set3-q19",
+      "category": "vocab_in_context",
+      "targetWord": "cogent",
+      "prompt": "In Paragraph 8, Edmund Burke delivered 'cogent speeches'. What is the meaning of 'cogent'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Clear, logical, persuasive, and convincingly argued",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Muddled, incoherent, and difficult to comprehend",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Extremely quiet and barely audible",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Deliberately dishonest and misleading",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Cogent' describes an argument, appeal, or case that is clear, logically compelling, and powerfully persuasive."
+    },
+    {
+      "id": "set3-q20",
+      "category": "vocab_in_context",
+      "targetWord": "equivocate",
+      "prompt": "In Paragraph 10, King George III chose to 'equivocate' on Catholic emancipation. What does 'equivocate' mean?",
+      "options": [
+        {
+          "id": "a",
+          "text": "To use ambiguous or evasive language to conceal the truth or avoid committing oneself",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "To speak with absolute clarity and decisive firmness",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "To resign from monarchical office immediately",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "To pay back debts with equal sums of gold",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Equivocate' means to speak vaguely, ambiguously, or evasively in order to avoid giving a direct answer or taking a definitive stand."
+    }
+  ]
+},
   4: {
   "setNumber": 4,
   "title": "The Forge of the Republic: Federalists, Anti-Federalists, and the Constitutional Crucible (1787–1791)",
@@ -2991,11 +3728,12 @@ export const HISTORICAL_STORIES: Record<1 | 2 | 4 | 5, HistoricalStory> = {
     }
   ]
 }
+
 };
 
 export function getHistoricalStory(setNum: number): HistoricalStory | undefined {
-  if (setNum === 1 || setNum === 2 || setNum === 4 || setNum === 5) {
-    return HISTORICAL_STORIES[setNum as 1 | 2 | 4 | 5];
+  if (setNum === 1 || setNum === 2 || setNum === 3 || setNum === 4 || setNum === 5) {
+    return HISTORICAL_STORIES[setNum as 1 | 2 | 3 | 4 | 5];
   }
   return undefined;
 }

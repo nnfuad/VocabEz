@@ -125,12 +125,12 @@ export default function HistoricalStoryPage() {
     setQuizFinished(false);
   };
 
-  if (!story || ![1, 2, 4, 5].includes(setNum)) {
+  if (!story || ![1, 2, 3, 4, 5].includes(setNum)) {
     return (
       <div className="max-w-2xl mx-auto py-16 text-center select-none space-y-4">
         <h1 className="text-2xl font-black text-gray-900 dark:text-white">Story Not Found</h1>
         <p className="text-sm text-gray-500">
-          Historical stories are currently available for Set 1, Set 2, Set 4, and Set 5.
+          Historical stories are currently available for Sets 1, 2, 3, 4, and 5.
         </p>
         <div className="flex flex-wrap justify-center gap-2 pt-4">
           <Link
@@ -144,6 +144,12 @@ export default function HistoricalStoryPage() {
             className="px-4 py-2 rounded-2xl bg-[#1CB0F6] text-white text-xs font-black uppercase tracking-wider"
           >
             Set 2: Galileo (1610)
+          </Link>
+          <Link
+            href="/story/3"
+            className="px-4 py-2 rounded-2xl bg-rose-600 text-white text-xs font-black uppercase tracking-wider"
+          >
+            Set 3: Britain (1642)
           </Link>
           <Link
             href="/story/4"
@@ -225,6 +231,16 @@ export default function HistoricalStoryPage() {
             Set 2: Galileo (1610)
           </Link>
           <Link
+            href="/story/3"
+            className={`px-3 py-1.5 rounded-xl whitespace-nowrap transition ${
+              setNum === 3
+                ? 'bg-[#FF4B4B] text-white shadow-sm'
+                : 'text-gray-500 hover:text-gray-900 dark:hover:text-white'
+            }`}
+          >
+            Set 3: Britain (1642)
+          </Link>
+          <Link
             href="/story/4"
             className={`px-3 py-1.5 rounded-xl whitespace-nowrap transition ${
               setNum === 4
@@ -254,6 +270,8 @@ export default function HistoricalStoryPage() {
             ? 'bg-gradient-to-r from-emerald-600 via-teal-600 to-green-700 border-emerald-800'
             : setNum === 2
             ? 'bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-700 border-sky-800'
+            : setNum === 3
+            ? 'bg-gradient-to-r from-rose-700 via-red-700 to-amber-700 border-red-900'
             : setNum === 4
             ? 'bg-gradient-to-r from-amber-600 via-rose-600 to-red-700 border-rose-900'
             : 'bg-gradient-to-r from-slate-700 via-zinc-700 to-stone-800 border-stone-900'
@@ -587,6 +605,14 @@ export default function HistoricalStoryPage() {
                   </Link>
                 )}
                 {setNum === 2 && (
+                  <Link
+                    href="/story/3"
+                    className="px-5 py-3 rounded-2xl bg-[#FF4B4B] text-white text-xs font-black uppercase tracking-wider hover:bg-[#E03B3B] transition"
+                  >
+                    Next: Set 3 (Britain)
+                  </Link>
+                )}
+                {setNum === 3 && (
                   <Link
                     href="/story/4"
                     className="px-5 py-3 rounded-2xl bg-[#FF9600] text-white text-xs font-black uppercase tracking-wider hover:bg-[#E68700] transition"

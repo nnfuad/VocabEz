@@ -98,7 +98,7 @@ export default function PracticeHubPage() {
         </p>
       </div>
 
-      {/* Historical Story Drills Banner (Sets 1, 2, 4, 5 Available) */}
+      {/* Historical Story Drills Banner (Sets 1-5 Available) */}
       <div className="bg-gradient-to-r from-amber-500 via-orange-500 to-rose-500 rounded-3xl p-5 md:p-6 text-white shadow-sm border-b-4 border-amber-700">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
           <div>
@@ -113,11 +113,11 @@ export default function PracticeHubPage() {
             </p>
           </div>
           <span className="text-xs font-extrabold px-3 py-1.5 rounded-full bg-white/20 shrink-0 self-start md:self-auto">
-            4 Historical Worlds
+            5 Historical Worlds (100 Quizzes)
           </span>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 pt-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 pt-2">
           {/* Set 1 Story Card */}
           <Link
             href="/story/1"
@@ -157,6 +157,28 @@ export default function PracticeHubPage() {
               </p>
             </div>
             <div className="flex items-center justify-between text-xs font-black text-sky-100 pt-3 mt-2 border-t border-white/10">
+              <span>Read + 20 Qs</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
+            </div>
+          </Link>
+
+          {/* Set 3 Story Card */}
+          <Link
+            href="/story/3"
+            className="group p-4 rounded-2xl bg-white/10 hover:bg-white/20 border border-white/20 transition flex flex-col justify-between backdrop-blur-sm"
+          >
+            <div>
+              <span className="text-[10px] font-black uppercase tracking-widest text-rose-200">
+                Set 3 • Britain & Ireland (1642–1801)
+              </span>
+              <h3 className="text-sm font-black text-white group-hover:underline mt-0.5 line-clamp-2">
+                Crowned Isles: Civil War, Boyne, & Union
+              </h3>
+              <p className="text-xs text-white/80 line-clamp-2 mt-1">
+                Cromwell, Boyne, Culloden, and Wolfe Tone across three kingdoms with all 30 Set 3 words.
+              </p>
+            </div>
+            <div className="flex items-center justify-between text-xs font-black text-rose-100 pt-3 mt-2 border-t border-white/10">
               <span>Read + 20 Qs</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
             </div>

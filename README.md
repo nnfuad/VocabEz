@@ -119,7 +119,7 @@ flowchart TD
 
 | Mode | Strategy Focus | GRE Application |
 | :--- | :--- | :--- |
-| **Historical Story Drills** | Narrative contextual immersion (Sets 1, 2, 4, 5) | Reading comprehension & GRE vocabulary in context |
+| **Historical Story Drills** | Narrative contextual immersion (Sets 1-5) | Reading comprehension & GRE vocabulary in context |
 | **Polarity Math** | Classify connotations into `+`, `-`, or `0` | Algebraic elimination in Text Completion |
 | **Synonym Clusters** | Pair cross-set twins (*laconic* <-> *taciturn*) | Sentence Equivalence (finding twin pairs) |
 | **Antonym Traps** | Dissect extreme opposites and contrasting meanings | Identifying contrast transitions (`although`, `despite`) |
@@ -129,9 +129,9 @@ flowchart TD
 
 ---
 
-## Historical Story Drills (Sets 1, 2, 4 & 5 Available)
+## Historical Story Drills (Sets 1-5 Available)
 
-VocabEz introduces an immersive story-based learning experience specifically designed for Sets 1, 2, 4, and 5. Instead of isolated flashcards, learners read gripping, historically authentic narratives that weave in all 30 target words, followed by interactive quizzes testing both historical comprehension and vocabulary mastery:
+VocabEz introduces an immersive story-based learning experience specifically designed for Sets 1 through 5. Instead of isolated flashcards, learners read gripping, historically authentic narratives that weave in all 30 target words, followed by interactive quizzes testing both historical comprehension and vocabulary mastery:
 
 ### Set 1: The Twilight of the Republic (Rome, 44 BCE)
 - **Narrative Focus:** Follows the final months of the Roman Republic, Julius Caesar's perpetual dictatorship, the philosophical anguish of Marcus Tullius Cicero, and the conspiracy led by Marcus Junius Brutus on the Ides of March.
@@ -144,6 +144,12 @@ VocabEz introduces an immersive story-based learning experience specifically des
 - **Vocabulary Coverage:** All 30 words of Set 2 (*deft*, *derivative*, *alacrity*, *advocate*, *anachronistic*, *ameliorate*, *audacious*, *aggrandize*, *banal*, *diatribe*, *adulterate*, *candid*, *construe*, *incredulous*, *ambivalent*, *amenable*, *demur*, *decorum*, *benign*, *ingenuous*, *brazen*, *caustic*, *avaricious*, *covet*, *calumny*, *desiccate*, *craven*, *convoluted*, *castigate*, *contrite*).
 - **Interactive Quizzes (20 Questions):** 10 questions on historical discoveries (Sidereus Nuncius, the Medicean Stars, the Letter to Christina, Urban VIII's Simplicio reaction) and 10 questions testing contextual vocabulary.
 - **Route:** [vocabez.vercel.app/story/2](https://vocabez.vercel.app/story/2)
+
+### Set 3: Crowned Isles: Civil War, the Boyne, & the Union of Three Kingdoms (Britain & Ireland, 1642-1801)
+- **Narrative Focus:** Chronicles the struggle across England, Scotland, and Ireland: the English Civil War and execution of Charles I, Oliver Cromwell's campaign in Ireland, the Battle of the Boyne, the Darien disaster, the Highland tragedy at Culloden, Edmund Burke's parliamentary eloquence, and Wolfe Tone's 1798 rebellion leading to the Acts of Union.
+- **Vocabulary Coverage:** All 30 words of Set 3 (*abate*, *abjure*, *anomalous*, *antipathy*, *arcane*, *arduous*, *artless*, *ascetic*, *assuage*, *betray*, *bucolic*, *burgeon*, *cacophonous*, *canonize*, *censure*, *chicanery*, *coalesce*, *cogent*, *compelling*, *contend*, *copious*, *cosmopolitan*, *deference*, *desultory*, *diffident*, *dilatory*, *equivocate*, *polarize*, *prodigal*, *verbose*).
+- **Interactive Quizzes (20 Questions):** 10 questions on British and Irish history (Wars of the Three Kingdoms, Drogheda, the Glorious Revolution, Battle of the Boyne, Acts of Union 1707, Darien Scheme, Culloden, Edmund Burke, Wolfe Tone, Act of Union 1800) and 10 questions testing contextual vocabulary.
+- **Route:** [vocabez.vercel.app/story/3](https://vocabez.vercel.app/story/3)
 
 ### Set 4: The Forge of the Republic (United States, 1787-1791)
 - **Narrative Focus:** Captures the Constitutional Convention and fierce ratification struggle through merged perspectives: Alexander Hamilton's defense of executive energy, James Madison's meticulous compromises, Thomas Jefferson's transatlantic demands for a Bill of Rights, and Patrick Henry's thundering Anti-Federalist warnings.
@@ -210,7 +216,7 @@ VocabEz/
 |   |   `-- ui/                      # Button3D, GuestWarningBanner
 |   |-- data/
 |   |   |-- enrichedVocab.json       # 810 Normalized GregMAT Words (Sets 1-27)
-|   |   `-- historicalStories.ts     # Authentic Narratives & 80 Story Quizzes (Sets 1, 2, 4, 5)
+|   |   `-- historicalStories.ts     # Authentic Narratives & 100 Story Quizzes (Sets 1-5)
 |   |-- lib/
 |   |   |-- guestStorage.ts          # LocalStorage Engine + Supabase Cloud Sync
 |   |   |-- questionEngine.ts        # Dynamic GRE Question Generator

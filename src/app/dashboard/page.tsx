@@ -186,7 +186,7 @@ export default function DashboardPage() {
                       <p className="text-[10px] text-gray-500 font-bold max-w-[120px] truncate mt-0.5">
                         {set.sampleWords.slice(0, 2).join(', ')}...
                       </p>
-                      {[1, 2, 4, 5].includes(set.setNum) && (
+                      {[1, 2, 3, 4, 5].includes(set.setNum) && (
                         <Link
                           href={`/story/${set.setNum}`}
                           className="mt-1.5 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-100 hover:bg-amber-200 dark:bg-amber-950/60 dark:hover:bg-amber-900/60 text-amber-800 dark:text-amber-200 text-[10px] font-black uppercase tracking-wider transition shadow-sm border border-amber-300 dark:border-amber-700"
