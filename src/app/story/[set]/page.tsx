@@ -125,25 +125,37 @@ export default function HistoricalStoryPage() {
     setQuizFinished(false);
   };
 
-  if (!story || (setNum !== 1 && setNum !== 2)) {
+  if (!story || ![1, 2, 4, 5].includes(setNum)) {
     return (
       <div className="max-w-2xl mx-auto py-16 text-center select-none space-y-4">
         <h1 className="text-2xl font-black text-gray-900 dark:text-white">Story Not Found</h1>
         <p className="text-sm text-gray-500">
-          Historical stories are currently available exclusively for Set 1 and Set 2.
+          Historical stories are currently available for Set 1, Set 2, Set 4, and Set 5.
         </p>
-        <div className="flex justify-center gap-3 pt-4">
+        <div className="flex flex-wrap justify-center gap-2 pt-4">
           <Link
             href="/story/1"
             className="px-4 py-2 rounded-2xl bg-[#58CC02] text-white text-xs font-black uppercase tracking-wider"
           >
-            Explore Set 1 Story
+            Set 1: Rome (44 BCE)
           </Link>
           <Link
             href="/story/2"
             className="px-4 py-2 rounded-2xl bg-[#1CB0F6] text-white text-xs font-black uppercase tracking-wider"
           >
-            Explore Set 2 Story
+            Set 2: Galileo (1610)
+          </Link>
+          <Link
+            href="/story/4"
+            className="px-4 py-2 rounded-2xl bg-amber-600 text-white text-xs font-black uppercase tracking-wider"
+          >
+            Set 4: USA (1787)
+          </Link>
+          <Link
+            href="/story/5"
+            className="px-4 py-2 rounded-2xl bg-slate-700 text-white text-xs font-black uppercase tracking-wider"
+          >
+            Set 5: Germany (1989)
           </Link>
         </div>
       </div>
@@ -190,11 +202,11 @@ export default function HistoricalStoryPage() {
           <ArrowLeft className="w-4 h-4" /> Back to Practice Hub
         </Link>
 
-        {/* Set 1 vs Set 2 Quick Switcher */}
-        <div className="flex items-center gap-1.5 p-1 bg-white dark:bg-[#202F36] rounded-2xl border-2 border-gray-200 dark:border-gray-700/60 text-xs font-black">
+        {/* Story Quick Switcher */}
+        <div className="flex items-center gap-1.5 p-1 bg-white dark:bg-[#202F36] rounded-2xl border-2 border-gray-200 dark:border-gray-700/60 text-xs font-black overflow-x-auto no-scrollbar scroll-touch max-w-full">
           <Link
             href="/story/1"
-            className={`px-3 py-1.5 rounded-xl transition ${
+            className={`px-3 py-1.5 rounded-xl whitespace-nowrap transition ${
               setNum === 1
                 ? 'bg-[#58CC02] text-white shadow-sm'
                 : 'text-gray-500 hover:text-gray-900 dark:hover:text-white'
@@ -204,13 +216,33 @@ export default function HistoricalStoryPage() {
           </Link>
           <Link
             href="/story/2"
-            className={`px-3 py-1.5 rounded-xl transition ${
+            className={`px-3 py-1.5 rounded-xl whitespace-nowrap transition ${
               setNum === 2
                 ? 'bg-[#1CB0F6] text-white shadow-sm'
                 : 'text-gray-500 hover:text-gray-900 dark:hover:text-white'
             }`}
           >
             Set 2: Galileo (1610)
+          </Link>
+          <Link
+            href="/story/4"
+            className={`px-3 py-1.5 rounded-xl whitespace-nowrap transition ${
+              setNum === 4
+                ? 'bg-[#FF9600] text-white shadow-sm'
+                : 'text-gray-500 hover:text-gray-900 dark:hover:text-white'
+            }`}
+          >
+            Set 4: USA (1787)
+          </Link>
+          <Link
+            href="/story/5"
+            className={`px-3 py-1.5 rounded-xl whitespace-nowrap transition ${
+              setNum === 5
+                ? 'bg-[#CE82FF] text-white shadow-sm'
+                : 'text-gray-500 hover:text-gray-900 dark:hover:text-white'
+            }`}
+          >
+            Set 5: Germany (1989)
           </Link>
         </div>
       </div>
@@ -220,7 +252,11 @@ export default function HistoricalStoryPage() {
         className={`rounded-3xl p-6 text-white border-b-4 shadow-sm ${
           setNum === 1
             ? 'bg-gradient-to-r from-emerald-600 via-teal-600 to-green-700 border-emerald-800'
-            : 'bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-700 border-sky-800'
+            : setNum === 2
+            ? 'bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-700 border-sky-800'
+            : setNum === 4
+            ? 'bg-gradient-to-r from-amber-600 via-rose-600 to-red-700 border-rose-900'
+            : 'bg-gradient-to-r from-slate-700 via-zinc-700 to-stone-800 border-stone-900'
         }`}
       >
         <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
@@ -542,11 +578,35 @@ export default function HistoricalStoryPage() {
                 <Button3D variant="gray" onClick={() => setActiveTab('read')}>
                   <BookOpen className="w-4 h-4 mr-1.5" /> Re-read Story
                 </Button3D>
+                {setNum === 1 && (
+                  <Link
+                    href="/story/2"
+                    className="px-5 py-3 rounded-2xl bg-[#1CB0F6] text-white text-xs font-black uppercase tracking-wider hover:bg-[#1899D6] transition"
+                  >
+                    Next: Set 2 Story
+                  </Link>
+                )}
+                {setNum === 2 && (
+                  <Link
+                    href="/story/4"
+                    className="px-5 py-3 rounded-2xl bg-[#FF9600] text-white text-xs font-black uppercase tracking-wider hover:bg-[#E68700] transition"
+                  >
+                    Next: Set 4 (USA)
+                  </Link>
+                )}
+                {setNum === 4 && (
+                  <Link
+                    href="/story/5"
+                    className="px-5 py-3 rounded-2xl bg-[#CE82FF] text-white text-xs font-black uppercase tracking-wider hover:bg-[#B86BE6] transition"
+                  >
+                    Next: Set 5 (Germany)
+                  </Link>
+                )}
                 <Link
-                  href={setNum === 1 ? '/story/2' : '/practice'}
-                  className="px-5 py-3 rounded-2xl bg-[#1CB0F6] text-white text-xs font-black uppercase tracking-wider hover:bg-[#1899D6] transition"
+                  href="/practice"
+                  className="px-5 py-3 rounded-2xl bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-xs font-black uppercase tracking-wider hover:bg-gray-300 dark:hover:bg-gray-600 transition"
                 >
-                  {setNum === 1 ? 'Go to Set 2 Story' : 'Back to Practice Hub'}
+                  Practice Hub
                 </Link>
               </div>
             </div>

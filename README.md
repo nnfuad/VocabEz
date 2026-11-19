@@ -119,7 +119,7 @@ flowchart TD
 
 | Mode | Strategy Focus | GRE Application |
 | :--- | :--- | :--- |
-| **Historical Story Drills** | Narrative contextual immersion (Sets 1 & 2) | Reading comprehension & GRE vocabulary in context |
+| **Historical Story Drills** | Narrative contextual immersion (Sets 1, 2, 4, 5) | Reading comprehension & GRE vocabulary in context |
 | **Polarity Math** | Classify connotations into `+`, `-`, or `0` | Algebraic elimination in Text Completion |
 | **Synonym Clusters** | Pair cross-set twins (*laconic* <-> *taciturn*) | Sentence Equivalence (finding twin pairs) |
 | **Antonym Traps** | Dissect extreme opposites and contrasting meanings | Identifying contrast transitions (`although`, `despite`) |
@@ -129,9 +129,9 @@ flowchart TD
 
 ---
 
-## Historical Story Drills (Sets 1 & 2 Exclusives)
+## Historical Story Drills (Sets 1, 2, 4 & 5 Available)
 
-VocabEz introduces an immersive story-based learning experience specifically designed for Set 1 and Set 2. Instead of isolated flashcards, learners read gripping, historically authentic narratives that weave in all 30 target words, followed by interactive quizzes testing both historical comprehension and vocabulary mastery:
+VocabEz introduces an immersive story-based learning experience specifically designed for Sets 1, 2, 4, and 5. Instead of isolated flashcards, learners read gripping, historically authentic narratives that weave in all 30 target words, followed by interactive quizzes testing both historical comprehension and vocabulary mastery:
 
 ### Set 1: The Twilight of the Republic (Rome, 44 BCE)
 - **Narrative Focus:** Follows the final months of the Roman Republic, Julius Caesar's perpetual dictatorship, the philosophical anguish of Marcus Tullius Cicero, and the conspiracy led by Marcus Junius Brutus on the Ides of March.
@@ -144,6 +144,18 @@ VocabEz introduces an immersive story-based learning experience specifically des
 - **Vocabulary Coverage:** All 30 words of Set 2 (*deft*, *derivative*, *alacrity*, *advocate*, *anachronistic*, *ameliorate*, *audacious*, *aggrandize*, *banal*, *diatribe*, *adulterate*, *candid*, *construe*, *incredulous*, *ambivalent*, *amenable*, *demur*, *decorum*, *benign*, *ingenuous*, *brazen*, *caustic*, *avaricious*, *covet*, *calumny*, *desiccate*, *craven*, *convoluted*, *castigate*, *contrite*).
 - **Interactive Quizzes (20 Questions):** 10 questions on historical discoveries (Sidereus Nuncius, the Medicean Stars, the Letter to Christina, Urban VIII's Simplicio reaction) and 10 questions testing contextual vocabulary.
 - **Route:** [vocabez.vercel.app/story/2](https://vocabez.vercel.app/story/2)
+
+### Set 4: The Forge of the Republic (United States, 1787-1791)
+- **Narrative Focus:** Captures the Constitutional Convention and fierce ratification struggle through merged perspectives: Alexander Hamilton's defense of executive energy, James Madison's meticulous compromises, Thomas Jefferson's transatlantic demands for a Bill of Rights, and Patrick Henry's thundering Anti-Federalist warnings.
+- **Vocabulary Coverage:** All 30 words of Set 4 (*abstain*, *approbation*, *cherish*, *corroborate*, *disparate*, *emulate*, *enervate*, *ephemeral*, *fervid*, *garrulous*, *incendiary*, *inimical*, *intimate*, *invigorate*, *mitigate*, *obsolete*, *opaque*, *paradigmatic*, *pedantic*, *placid*, *polemical*, *precipitate*, *profundity*, *prophetic*, *prudent*, *punctilious*, *recondite*, *scrupulous*, *tranquil*, *vacillate*).
+- **Interactive Quizzes (20 Questions):** 10 questions on historical governance (Articles of Confederation failures, Connecticut Compromise, Publius essays, Federalist No. 51, Bill of Rights ratification) and 10 questions testing contextual vocabulary.
+- **Route:** [vocabez.vercel.app/story/4](https://vocabez.vercel.app/story/4)
+
+### Set 5: The Divided Sky: Cold War & Fall of the Berlin Wall (Germany, 1961-1990)
+- **Narrative Focus:** Spans the erection of the Berlin Wall to the peaceful revolution (Die Wende) and reunification. Weaves together the perspectives of an East Berlin dissident, a Kreuzberg observer, border commander Harald Jäger at the Bornholmer Straße crossing, and Chancellor Helmut Kohl negotiating the Two-Plus-Four Treaty.
+- **Vocabulary Coverage:** All 30 words of Set 5 (*aloof*, *clangor*, *conventional*, *debunk*, *diminutive*, *discernible*, *enigmatic*, *estranged*, *extravagant*, *fanciful*, *frivolous*, *heterogeneous*, *imperious*, *impertinent*, *invasive*, *irresolute*, *laudable*, *lax*, *marginalize*, *panache*, *plodding*, *prosaic*, *remedial*, *restive*, *sporadic*, *stigmatize*, *undermine*, *utterly*, *weary*, *zealous*).
+- **Interactive Quizzes (20 Questions):** 10 questions on modern German history (Operation Rose, Stasi domestic surveillance, Leipzig Monday Demonstrations, Schabowski's press conference, Bornholmer Straße breach, German Unity Day) and 10 questions testing contextual vocabulary.
+- **Route:** [vocabez.vercel.app/story/5](https://vocabez.vercel.app/story/5)
 
 ---
 
@@ -198,7 +210,7 @@ VocabEz/
 |   |   `-- ui/                      # Button3D, GuestWarningBanner
 |   |-- data/
 |   |   |-- enrichedVocab.json       # 810 Normalized GregMAT Words (Sets 1-27)
-|   |   `-- historicalStories.ts     # Authentic Narratives & 40 Story Quizzes (Sets 1 & 2)
+|   |   `-- historicalStories.ts     # Authentic Narratives & 80 Story Quizzes (Sets 1, 2, 4, 5)
 |   |-- lib/
 |   |   |-- guestStorage.ts          # LocalStorage Engine + Supabase Cloud Sync
 |   |   |-- questionEngine.ts        # Dynamic GRE Question Generator

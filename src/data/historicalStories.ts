@@ -21,7 +21,7 @@ export interface StoryParagraph {
 }
 
 export interface HistoricalStory {
-  setNumber: 1 | 2;
+  setNumber: 1 | 2 | 4 | 5;
   title: string;
   subtitle: string;
   historicalPeriod: string;
@@ -34,9 +34,8 @@ export interface HistoricalStory {
   questions: StoryQuizQuestion[];
 }
 
-
-export const HISTORICAL_STORIES: Record<1 | 2, HistoricalStory> = {
-  1: {
+export const HISTORICAL_STORIES: Record<1 | 2 | 4 | 5, HistoricalStory> = {
+ 1: {
   "setNumber": 1,
   "title": "The Twilight of the Republic: Cicero, Caesar, and the Ides of March (44 BCE)",
   "subtitle": "Experience the betrayal, philosophy, and collapse of Roman democracy through all 30 Set 1 vocabulary words.",
@@ -1517,11 +1516,1486 @@ export const HISTORICAL_STORIES: Record<1 | 2, HistoricalStory> = {
     }
   ]
 }
+,
+  4: {
+  "setNumber": 4,
+  "title": "The Forge of the Republic: Federalists, Anti-Federalists, and the Constitutional Crucible (1787–1791)",
+  "subtitle": "Step into the sweltering Assembly Room of Philadelphia and the fiery convention of Richmond as Alexander Hamilton, James Madison, Thomas Jefferson, and Patrick Henry clash over sovereignty, human nature, and the future of self-governance.",
+  "historicalPeriod": "1787 – 1791 CE (Constitutional Convention & Ratification)",
+  "readTimeMinutes": 10,
+  "heroBadge": "American Constitutional History",
+  "introSummary": "In the humid summer of 1787, fifty-five delegates gathered in Philadelphia behind locked doors and drawn curtains. The Articles of Confederation were broken, credit was ruined, and Shays' Rebellion had exposed the fragility of an infant nation. Over the next four years, across fierce closed-door debates, brilliant pamphlets signed 'Publius', and electrifying state ratification battles, American thinkers wrestled with a fundamental question: Can human societies establish good government from reflection and choice, or are they forever destined to depend on accident and force?",
+  "keyFigures": [
+    {
+      "name": "James Madison",
+      "role": "Virginian delegate, note-taker, and primary architect of the Virginia Plan and Bill of Rights"
+    },
+    {
+      "name": "Alexander Hamilton",
+      "role": "New York delegate, champion of energetic federal governance, and co-author of The Federalist Papers"
+    },
+    {
+      "name": "Patrick Henry",
+      "role": "Legendary orator and fierce Anti-Federalist leader who boycotted Philadelphia and contested ratification"
+    },
+    {
+      "name": "Benjamin Franklin",
+      "role": "Elder statesman and diplomat whose gentle compromises prevented delegates from walking out"
+    },
+    {
+      "name": "Thomas Jefferson",
+      "role": "Minister to France whose transatlantic letters insisted upon a bill of rights and term limits"
+    }
+  ],
+  "paragraphs": [
+    {
+      "id": 1,
+      "subtitle": "I. The Impotence of the Old Confederation",
+      "text": "By the spring of 1787, the fledgling United States stood near financial paralysis. Under the Articles of Confederation, the national government had no power to levy taxes, regulate commerce, or enforce treaties, rendering the existing compact practically obsolete in the eyes of nationalist reformers. In Massachusetts, destitute war veterans had taken up arms in Shays' Rebellion, an uprising that threatened to enervate the fragile authority of state courts and commercial centers. Across the thirteen sovereign states, conflicting tariffs and disparate currencies bred profound mutual distrust.",
+      "targetWords": [
+        "obsolete",
+        "enervate",
+        "disparate"
+      ]
+    },
+    {
+      "id": 2,
+      "subtitle": "II. The Locked Chamber in Philadelphia",
+      "text": "On May 25, 1787, fifty-five men convened in the Pennsylvania State House under a strict oath of secrecy. James Madison of Virginia arrived with trunks of historical treatises on ancient confederacies. With punctilious discipline, Madison positioned himself near the presiding officer, George Washington, recording every word uttered in the chamber. Madison was scrupulous in avoiding partisan bias in his journal, believing the delegates were crafting a paradigmatic charter that would instruct future generations on the architecture of human liberty.",
+      "targetWords": [
+        "punctilious",
+        "scrupulous",
+        "paradigmatic"
+      ]
+    },
+    {
+      "id": 3,
+      "subtitle": "III. The Clashing Plans of Representation",
+      "text": "Tension ignited when Edmund Randolph presented the Virginia Plan, calling for proportional representation based on population. Small states recoiled; William Paterson of New Jersey argued that such an arrangement was inimical to the sovereignty of smaller commonwealths. For weeks, delegates appeared ready to vacillate between total dissolution and hollow appeasement. It required the Connecticut Compromise—brokered by Roger Sherman—to mitigate regional acrimony by establishing a House apportioned by population and a Senate of equal state representation.",
+      "targetWords": [
+        "inimical",
+        "vacillate",
+        "mitigate"
+      ]
+    },
+    {
+      "id": 4,
+      "subtitle": "IV. Hamilton's Vision of an Energetic Executive",
+      "text": "On June 18, Alexander Hamilton delivered a famous six-hour address that shocked the hall. Speaking with fervid eloquence, the thirty-year-old New Yorker argued that a weak executive invited anarchy. Hamilton proposed an executive and senate elected for life on good behavior, daring to emulate the stability of the British constitutional model while eschewing hereditary titles. Though delegates rejected his extreme plan, Hamilton's core conviction—that energetic government does not destroy liberty but rather serves to invigorate commercial expansion and national defense—became the bedrock of modern federalism.",
+      "targetWords": [
+        "fervid",
+        "emulate",
+        "invigorate"
+      ]
+    },
+    {
+      "id": 5,
+      "subtitle": "V. The Sage of Pennsylvania and the Rising Sun",
+      "text": "As arguments grew bitter over slavery and federal commerce powers, eighty-one-year-old Benjamin Franklin acted as the moral anchor of the convention. Possessing a placid demeanor that calmed fiery tempers, Franklin urged delegates to bury their private dogmas. On the convention's final day, September 17, Franklin spoke with characteristic profundity, confessing that while he did not approve of every part of the Constitution, he doubted anyone could make a better one. A prudent leader, he observed, knows when to doubt his own infallibility.",
+      "targetWords": [
+        "placid",
+        "profundity",
+        "prudent"
+      ]
+    },
+    {
+      "id": 6,
+      "subtitle": "VI. The War of the Quill: Publius Takes the Field",
+      "text": "Signing the parchment was merely the opening skirmish; ratification required nine states. In New York, where Governor George Clinton opposed the charter, Hamilton enlisted James Madison and John Jay to write a series of newspaper essays under the pseudonym 'Publius'. Their essays were not garrulous diatribes, but systematic, polemical defenses of constitutional republicanism that dismantled Anti-Federalist alarms. Through these eighty-five essays, now known as The Federalist Papers, the authors sought public approbation for a divided, balanced government.",
+      "targetWords": [
+        "garrulous",
+        "polemical",
+        "approbation"
+      ]
+    },
+    {
+      "id": 7,
+      "subtitle": "VII. The Fiery Crucible in Richmond",
+      "text": "In June 1788, the decisive ratification battle erupted in Richmond, Virginia. The great revolutionary orator Patrick Henry took the floor, delivering incendiary speeches that condemned the preamble's words 'We the People' as a betrayal of state sovereignty. Henry warned that an imperial president would precipitate tyranny, taxing citizens into servitude. Madison, physically frail and speaking in quiet tones, rebutted each accusation methodically, persuading undecided delegates that they could not abstain from building a stable continental union.",
+      "targetWords": [
+        "incendiary",
+        "precipitate",
+        "abstain"
+      ]
+    },
+    {
+      "id": 8,
+      "subtitle": "VIII. Transatlantic Warnings from Paris",
+      "text": "Across the Atlantic, Thomas Jefferson observed the proceedings from his diplomatic post in Paris. Jefferson admired the delegates' intellectual boldness, yet he refused to cherish an unchecked centralized apparatus. In letters to Madison, Jefferson ventured to intimate his grave anxiety: the absence of a explicit bill of rights and the perpetual re-eligibility of the president. Jefferson's letters proved prophetic, correctly foreseeing that free citizens would never trust a central government lacking explicit guarantees for free speech, assembly, and trial by jury.",
+      "targetWords": [
+        "cherish",
+        "intimate",
+        "prophetic"
+      ]
+    },
+    {
+      "id": 9,
+      "subtitle": "IX. Federalist No. 51 and the Science of Factions",
+      "text": "To convince skeptics, Madison articulated the deep philosophical framework of the new government in Federalist No. 51. Rather than relying on recondite legal jargon, he laid bare the realities of human self-interest: 'Ambition must be made to counteract ambition.' Critics argued that republican government could only flourish across small territories, but Madison showed that in a large republic, an opaque coalition of factions would neutralize one another. Historical data from ancient Greece and Rome was marshaled to corroborate his revolutionary theory of separated powers.",
+      "targetWords": [
+        "recondite",
+        "opaque",
+        "corroborate"
+      ]
+    },
+    {
+      "id": 10,
+      "subtitle": "X. The Bill of Rights and the Living Compact",
+      "text": "To fulfill the promise made to wavering states, Madison drafted twelve constitutional amendments in the First Federal Congress, ten of which were ratified in December 1791 as the Bill of Rights. Rather than indulging pedantic squabbles, Congress acted decisively to protect the liberty of conscience. The American Constitution avoided becoming an ephemeral experiment, providing a tranquil yet adaptable framework that weathered civil war, depression, and global conflict for centuries to come.",
+      "targetWords": [
+        "pedantic",
+        "ephemeral",
+        "tranquil"
+      ]
+    }
+  ],
+  "allTargetWords": [
+    "abstain",
+    "approbation",
+    "cherish",
+    "corroborate",
+    "disparate",
+    "emulate",
+    "enervate",
+    "ephemeral",
+    "fervid",
+    "garrulous",
+    "incendiary",
+    "inimical",
+    "intimate",
+    "invigorate",
+    "mitigate",
+    "obsolete",
+    "opaque",
+    "paradigmatic",
+    "pedantic",
+    "placid",
+    "polemical",
+    "precipitate",
+    "profundity",
+    "prophetic",
+    "prudent",
+    "punctilious",
+    "recondite",
+    "scrupulous",
+    "tranquil",
+    "vacillate"
+  ],
+  "questions": [
+    {
+      "id": "set4-q1",
+      "category": "historical_fact",
+      "prompt": "Under the Articles of Confederation, which major institutional deficiency prompted nationalist leaders to call for the Constitutional Convention in 1787?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The national government lacked the power to tax, enforce treaties, or regulate interstate commerce",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "The executive branch possessed excessive unilateral veto power over the states",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "The Supreme Court had declared all state militias unconstitutional",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "A hereditary monarchy had been established in Virginia",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Under the Articles of Confederation, Congress could not levy taxes directly, regulate interstate or international commerce, or compel states to provide revenue, leading to severe financial paralysis and uprisings like Shays' Rebellion."
+    },
+    {
+      "id": "set4-q2",
+      "category": "historical_fact",
+      "prompt": "What compromise resolved the bitter dispute between large and small states regarding congressional representation?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The Connecticut (Great) Compromise",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "The Missouri Compromise",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "The Treaty of Paris",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "The Three-Fifths Compromise",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Brokered by Roger Sherman and Oliver Ellsworth of Connecticut, the Great Compromise established a bicameral legislature: the House of Representatives apportioned by population, and the Senate with equal representation (two senators per state)."
+    },
+    {
+      "id": "set4-q3",
+      "category": "historical_fact",
+      "prompt": "Who were the three authors who wrote under the shared pseudonym 'Publius' to produce The Federalist Papers?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Alexander Hamilton, James Madison, and John Jay",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Thomas Jefferson, Patrick Henry, and Samuel Adams",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "George Washington, Benjamin Franklin, and John Adams",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "James Monroe, George Mason, and Thomas Paine",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Hamilton, Madison, and Jay collaborated under the pen name 'Publius' in 1787–1788 to write 85 essays urging the citizens of New York to ratify the new United States Constitution."
+    },
+    {
+      "id": "set4-q4",
+      "category": "historical_fact",
+      "prompt": "What was Patrick Henry's primary objection to the Constitution during the Virginia Ratification Convention?",
+      "options": [
+        {
+          "id": "a",
+          "text": "He feared a consolidated national government and powerful president would usurp state sovereignty and individual liberties",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "He demanded that the capital city be placed in Massachusetts rather than the South",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "He wanted to abolish the Senate and establish direct democratic referendums",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "He objected to creating any federal court system whatsoever",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Patrick Henry warned that the phrase 'We the People' signaled an imperial consolidation of power that would crush state autonomy and potentially degenerate into monarchical tyranny without strong safeguards."
+    },
+    {
+      "id": "set4-q5",
+      "category": "historical_fact",
+      "prompt": "What key condition did Thomas Jefferson and several state conventions insist upon in exchange for ratifying the Constitution?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The addition of a Bill of Rights guaranteeing fundamental individual liberties",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "The complete dissolution of the federal judiciary",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "A constitutional mandate requiring unanimous consent for all foreign treaties",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "The immediate re-institution of British commercial tariffs",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Jefferson and key Anti-Federalist figures insisted that a bill of rights was necessary to protect freedom of religion, speech, assembly, and trial by jury against potential federal overreach."
+    },
+    {
+      "id": "set4-q6",
+      "category": "historical_fact",
+      "prompt": "What famous principle was articulated by James Madison in Federalist No. 51 to justify checks and balances?",
+      "options": [
+        {
+          "id": "a",
+          "text": "'Ambition must be made to counteract ambition'",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "'Give me liberty, or give me death'",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "'No taxation without representation'",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "'A house divided against itself cannot stand'",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In Federalist No. 51, Madison explained that because human beings are flawed, constitutional structures must pit the personal ambitions of leaders in different branches against each other to preserve liberty."
+    },
+    {
+      "id": "set4-q7",
+      "category": "historical_fact",
+      "prompt": "How many states were required to ratify the Constitution for it to take effect among the agreeing states?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Nine out of the thirteen states",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "All thirteen states unanimously",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Seven out of thirteen states",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Ten out of thirteen states",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Article VII of the U.S. Constitution stipulated that ratification by conventions of nine states would be sufficient for the establishment of the Constitution between the states so ratifying."
+    },
+    {
+      "id": "set4-q8",
+      "category": "historical_fact",
+      "prompt": "What was the significance of Benjamin Franklin's observation regarding the sun carved on George Washington's chair at the close of the convention?",
+      "options": [
+        {
+          "id": "a",
+          "text": "He concluded it was a rising sun symbolizing the birth of a viable republic, not a setting sun of failure",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "He warned that a solar eclipse would bring bad luck to the new Congress",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "He argued the emblem represented British royal supremacy",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "He asked that the chair be donated to the University of Pennsylvania",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "As the last delegates signed the document, Franklin noted that throughout the difficult summer he had wondered whether the painted sun on Washington's chair was rising or setting, but now had the happiness to know it was a rising sun."
+    },
+    {
+      "id": "set4-q9",
+      "category": "historical_fact",
+      "prompt": "Which armed rebellion in 1786–1787 underscored the weakness of the Articles of Confederation and spurred attendance at the Philadelphia Convention?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Shays' Rebellion in western Massachusetts",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "The Whiskey Rebellion in Pennsylvania",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Nat Turner's Rebellion in Virginia",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Bacon's Rebellion in colonial Jamestown",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Led by Revolutionary War veteran Daniel Shays, Massachusetts farmers shut down debt courts in 1786, demonstrating that the Confederation Congress had neither funds nor troops to maintain public order."
+    },
+    {
+      "id": "set4-q10",
+      "category": "historical_fact",
+      "prompt": "When were the first ten amendments (the Bill of Rights) officially ratified by the states?",
+      "options": [
+        {
+          "id": "a",
+          "text": "December 1791",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "July 1776",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "September 1787",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "January 1800",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Drafted by James Madison in 1789 to satisfy anti-federalist critics, ten of the proposed amendments received final state ratification on December 15, 1791."
+    },
+    {
+      "id": "set4-q11",
+      "category": "vocab_in_context",
+      "targetWord": "obsolete",
+      "prompt": "In Paragraph 1, the Articles of Confederation were described as 'practically obsolete'. What does 'obsolete' mean in this context?",
+      "options": [
+        {
+          "id": "a",
+          "text": "No longer produced or used; out of date and ineffective",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Revered as sacred and untouchable",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Wildly popular and universally praised",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Extremely costly to purchase",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Obsolete' means out of date or no longer useful, referring to how the Articles of Confederation could no longer govern the nation effectively."
+    },
+    {
+      "id": "set4-q12",
+      "category": "vocab_in_context",
+      "targetWord": "enervate",
+      "prompt": "In Paragraph 1, Shays' Rebellion threatened to 'enervate the fragile authority' of state courts. What is the meaning of 'enervate'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "To make someone or something feel drained of energy or vitality; weaken",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "To aggressively expand and fortify",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "To celebrate with high honors",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "To replace through election",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Enervate' means to weaken, exhaust, or drain of energy and capacity to act."
+    },
+    {
+      "id": "set4-q13",
+      "category": "vocab_in_context",
+      "targetWord": "punctilious",
+      "prompt": "In Paragraph 2, Madison recorded the debates with 'punctilious discipline'. What does 'punctilious' mean?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Showing great attention to detail, precision, or correct procedure",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Careless, rushed, and sloppy",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Overly loud and boastful",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Deceitful and evasive",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Punctilious' means showing great attention to detail or correct behavior; meticulous and precise."
+    },
+    {
+      "id": "set4-q14",
+      "category": "vocab_in_context",
+      "targetWord": "paradigmatic",
+      "prompt": "In Paragraph 2, delegates believed they were crafting a 'paradigmatic charter'. What does 'paradigmatic' signify?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Serving as a typical, exemplary, or archetypal model",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Temporary and intended to be discarded quickly",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Cryptic and hidden from common understanding",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Financially ruinous to its creators",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Paradigmatic' means serving as a standard model, pattern, or exemplary instance of something."
+    },
+    {
+      "id": "set4-q15",
+      "category": "vocab_in_context",
+      "targetWord": "inimical",
+      "prompt": "In Paragraph 3, small states argued proportional representation was 'inimical to the sovereignty of smaller commonwealths'. What does 'inimical' mean?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Tending to obstruct, harm, or be hostile toward",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Deeply supportive and friendly",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Insignificant and trivial",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Ancient and historic in origin",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Inimical' means tending to obstruct or harm; unfavorable, hostile, or adverse."
+    },
+    {
+      "id": "set4-q16",
+      "category": "vocab_in_context",
+      "targetWord": "vacillate",
+      "prompt": "In Paragraph 3, delegates appeared ready to 'vacillate between total dissolution and hollow appeasement'. What does 'vacillate' mean?",
+      "options": [
+        {
+          "id": "a",
+          "text": "To waver indecisively between different opinions or actions",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "To march forward with absolute certainty",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "To refuse to speak in public",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "To applaud enthusiastically",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Vacillate' means to waver between different opinions or courses of action; to be irresolute or indecisive."
+    },
+    {
+      "id": "set4-q17",
+      "category": "vocab_in_context",
+      "targetWord": "fervid",
+      "prompt": "In Paragraph 4, Hamilton spoke with 'fervid eloquence'. What is the meaning of 'fervid'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Intensely enthusiastic, passionate, or burning with zeal",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Cold, detached, and indifferent",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Hesitant, stuttering, and nervous",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Deceptive and fraudulent",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Fervid' means intensely enthusiastic or passionate, especially to an ardent or burning degree."
+    },
+    {
+      "id": "set4-q18",
+      "category": "vocab_in_context",
+      "targetWord": "polemical",
+      "prompt": "In Paragraph 6, The Federalist Papers were described as 'systematic, polemical defenses'. What does 'polemical' mean?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Involving strongly critical, disputatious, or argumentative writing or speech",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Lyrical and musical in tone",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Completely neutral and objective",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Satirical and purely comedic",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Polemical' relates to or involves a passionate, strongly critical, or disputatious argument attacking an opposing view."
+    },
+    {
+      "id": "set4-q19",
+      "category": "vocab_in_context",
+      "targetWord": "incendiary",
+      "prompt": "In Paragraph 7, Patrick Henry delivered 'incendiary speeches'. In this rhetorical context, what does 'incendiary' mean?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Tending to stir up conflict, passion, or intense strife",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Physically wet and waterlogged",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Quiet and whispering in volume",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Humorous and lighthearted",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Incendiary' metaphorically means tending to inflame passions, stir up conflict, or agitate rebellion."
+    },
+    {
+      "id": "set4-q20",
+      "category": "vocab_in_context",
+      "targetWord": "ephemeral",
+      "prompt": "In Paragraph 10, the Constitution avoided becoming an 'ephemeral experiment'. What does 'ephemeral' mean?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Lasting for a very short time; fleeting or transient",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Perpetual, eternal, and unchanging",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Complicated and hard to decipher",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Universally despised by citizens",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Ephemeral' means lasting for a very brief time; short-lived, transient, or fleeting."
+    }
+  ]
+},
+  5: {
+  "setNumber": 5,
+  "title": "The Divided Sky: Cold War, Stasi Secrets, and the Fall of the Berlin Wall (1961–1990)",
+  "subtitle": "Experience the division and peaceful reunification of Germany through the merged eyes of an East Berlin dissident, a Kreuzberg observer, a stunned border guard at Bornholmer Straße, and Chancellor Helmut Kohl.",
+  "historicalPeriod": "1961 – 1990 CE (Divided Berlin, Die Wende & Reunification)",
+  "readTimeMinutes": 10,
+  "heroBadge": "Modern German History",
+  "introSummary": "In the dead of night on August 13, 1961, barbed wire unspooled across Berlin, severing families, subways, and streets. For twenty-eight years, the Berlin Wall stood as the most concrete symbol of the Iron Curtain—a 155-kilometer perimeter guarded by watchtowers, attack dogs, and tripwire machine guns. Yet behind the concrete facade, a quiet revolution was germinating. In autumn 1989, candlelit Monday demonstrations in Leipzig, courage in underground churches, and a bureaucratic blunder in an East Berlin press room converged to dismantle the barrier without a single shot fired.",
+  "keyFigures": [
+    {
+      "name": "Harald Jäger",
+      "role": "Stasi border lieutenant-colonel on duty at Bornholmer Straße on November 9, 1989"
+    },
+    {
+      "name": "Katrin Weber",
+      "role": "East Berlin environmental activist and dissident participating in the Leipzig Monday marches"
+    },
+    {
+      "name": "Günter Schabowski",
+      "role": "SED Politburo spokesman whose improvised press conference opened the gates"
+    },
+    {
+      "name": "Helmut Kohl",
+      "role": "Chancellor of the Federal Republic of Germany and architect of the Ten-Point Plan for German Unity"
+    },
+    {
+      "name": "Hans-Dietrich Genscher",
+      "role": "West German Foreign Minister who championed diplomacy and the Two-Plus-Four Treaty"
+    }
+  ],
+  "paragraphs": [
+    {
+      "id": 1,
+      "subtitle": "I. The Night the Wire Unspooled (August 1961)",
+      "text": "In the pre-dawn darkness of August 13, 1961, East German combat groups sealed the border under Operation Rose. Overnight, families became estranged, separated by coils of razor wire that severed Bernauer Straße and Potsdamer Platz. The metallic clangor of pneumatic drills and construction crews echoed across the Spree as concrete cinder blocks rose into a lethal barrier. To Western observers in Kreuzberg, the sudden wall proved that Soviet control was anything but lax; it was a desperate bid to halt the flight of millions fleeing communist rule.",
+      "targetWords": [
+        "estranged",
+        "clangor",
+        "lax"
+      ]
+    },
+    {
+      "id": 2,
+      "subtitle": "II. The Invisible Web of the Stasi",
+      "text": "Within the German Democratic Republic (GDR), the Ministry for State Security—the Stasi—constructed an invasive apparatus of domestic surveillance. Operating under Erich Mielke, hundreds of thousands of full-time agents and civilian informants combed mail, wiretapped apartments, and gathered scent samples in glass jars. The state sought to stigmatize any independent intellectual or rock musician who dared question the socialist order, systematically acting to marginalize dissidents through psychological subversion known as 'Zersetzung'.",
+      "targetWords": [
+        "invasive",
+        "stigmatize",
+        "marginalize"
+      ]
+    },
+    {
+      "id": 3,
+      "subtitle": "III. Two Worlds Across the Death Strip",
+      "text": "By the 1980s, the physical contrast between the two halves of the city was striking. On the western side of the Wall, West Berlin pulsed with extravagant counterculture, neon billboards on Kurfürstendamm, and avant-garde art scrawled across the concrete face. In contrast, life in East Berlin often felt utilitarian and plodding, marked by lengthy queues for basic goods and the prosaic rhythm of state-allocated Trabant automobiles and prefabricated Plattenbau housing estates.",
+      "targetWords": [
+        "extravagant",
+        "plodding",
+        "prosaic"
+      ]
+    },
+    {
+      "id": 4,
+      "subtitle": "IV. The Monday Prayers: 'Wir sind das Volk!'",
+      "text": "In September 1989, dissent found a sanctuary inside Leipzig's Church of St. Nicholas. Pastor Christian Führer opened the sanctuary for weekly peace prayers, which soon spilled onto the Karl Marx Square. A restive population, inspired by Mikhail Gorbachev's glasnost, began chanting 'Wir sind das Volk!' ('We are the people!'). Despite threats of a Tiananmen Square-style crackdown, zealous marchers carried candles with both hands so they could hold no stones, presenting a peaceful, laudable testament to nonviolent resistance that paralyzed security forces.",
+      "targetWords": [
+        "restive",
+        "zealous",
+        "laudable"
+      ]
+    },
+    {
+      "id": 5,
+      "subtitle": "V. The Monolith Begins to Crack",
+      "text": "In East Berlin, the imperious leader Erich Honecker boasted that the Wall would stand for another fifty or one hundred years. Yet behind the palace facade, the regime was collapsing. Tens of thousands of East German citizens were fleeing through the newly opened Hungarian border and crowding into West German embassies in Prague. Stunned by the scale of the exodus, the Politburo ousted Honecker, but replacement leaders proved irresolute, unable to resolve the economic rot that continued to undermine the foundation of the state.",
+      "targetWords": [
+        "imperious",
+        "irresolute",
+        "undermine"
+      ]
+    },
+    {
+      "id": 6,
+      "subtitle": "VI. The Press Conference of November 9, 1989",
+      "text": "At 6:00 PM on November 9, 1989, Politburo spokesman Günter Schabowski took the podium before international journalists to explain new travel regulations. When Italian journalist Riccardo Ehrman asked an impertinent question about when the travel rules would take effect, an exhausted Schabowski shuffled his notes. He gave an enigmatic, rambling answer before uttering the fateful words: 'Das tritt nach meiner Kenntnis... ist das sofort, unverzüglich' ('To my knowledge... this takes effect immediately, without delay'). The announcement was not frivolous gossip; within minutes, West German television broadcast that the Wall was open.",
+      "targetWords": [
+        "impertinent",
+        "enigmatic",
+        "frivolous"
+      ]
+    },
+    {
+      "id": 7,
+      "subtitle": "VII. The Standoff at Bornholmer Straße",
+      "text": "At the Bornholmer Straße border crossing, Lieutenant-Colonel Harald Jäger stared through his command hut window in disbelief. Thousands of shouting East Berliners were surging against the barriers, brandishing their identity cards. Jäger called his superiors at the Ministry of State Security, but high-ranking generals remained aloof, offering no clear orders and refusing responsibility. Facing a weary, overwhelming sea of citizens, Jäger realized that using armed force would result in a bloodbath, leaving the crossing utterly indefensible without lethal carnage.",
+      "targetWords": [
+        "aloof",
+        "weary",
+        "utterly"
+      ]
+    },
+    {
+      "id": 8,
+      "subtitle": "VIII. The Midnight Tsunami of Joy",
+      "text": "At 11:30 PM, Jäger made the unilateral decision: 'Open the barrier!' Tens of thousands surged across the bridge into West Berlin in tears, greeted by West Berliners with flowers, chocolate, and champagne. Young 'Mauerspechte' (wall peckers) climbed atop the ramparts at the Brandenburg Gate with panache, dancing in the glare of camera spotlights. The physical boundary was breached, and a discernible sense of euphoria swept across Europe, turning what had seemed a fanciful dream into an undeniable living reality.",
+      "targetWords": [
+        "panache",
+        "discernible",
+        "fanciful"
+      ]
+    },
+    {
+      "id": 9,
+      "subtitle": "IX. The Two-Plus-Four Diplomatic Marathon",
+      "text": "Tearing down concrete was fast, but unifying two distinct states required unprecedented diplomacy. Chancellor Helmut Kohl seized the historic moment with his Ten-Point Plan, while Foreign Minister Hans-Dietrich Genscher negotiated with the four Allied victor powers: the United States, the Soviet Union, Britain, and France. Rather than relying on conventional diplomatic slow-walking or piecemeal remedial measures, they worked feverishly to craft the Two-Plus-Four Treaty. They managed to debunk international fears of a resurgent, aggressive Germany by guaranteeing the Polish border and anchoring unified Germany inside NATO.",
+      "targetWords": [
+        "conventional",
+        "debunk",
+        "remedial"
+      ]
+    },
+    {
+      "id": 10,
+      "subtitle": "X. Reunification: The Heterogeneous Nation",
+      "text": "On October 3, 1990, less than eleven months after the Wall fell, the German Democratic Republic ceased to exist, and the five eastern states acceded to the Federal Republic. Germany became a heterogeneous nation uniting forty years of starkly divergent economic systems, cultural outlooks, and social memory. Though diminutive in geographic comparison to continental superpowers, the unified Federal Republic overcame sporadic economic friction to become the democratic and industrial pillar of a united Europe.",
+      "targetWords": [
+        "heterogeneous",
+        "diminutive",
+        "sporadic"
+      ]
+    }
+  ],
+  "allTargetWords": [
+    "aloof",
+    "clangor",
+    "conventional",
+    "debunk",
+    "diminutive",
+    "discernible",
+    "enigmatic",
+    "estranged",
+    "extravagant",
+    "fanciful",
+    "frivolous",
+    "heterogeneous",
+    "imperious",
+    "impertinent",
+    "invasive",
+    "irresolute",
+    "laudable",
+    "lax",
+    "marginalize",
+    "panache",
+    "plodding",
+    "prosaic",
+    "remedial",
+    "restive",
+    "sporadic",
+    "stigmatize",
+    "undermine",
+    "utterly",
+    "weary",
+    "zealous"
+  ],
+  "questions": [
+    {
+      "id": "set5-q1",
+      "category": "historical_fact",
+      "prompt": "On what exact date did East German authorities begin constructing the Berlin Wall (Operation Rose)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "August 13, 1961",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "November 9, 1989",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "May 8, 1945",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "October 3, 1990",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In the early morning hours of Sunday, August 13, 1961, East German military, police, and workers closed the sector borders in Berlin and began tearing up streets and stringing barbed wire, known as Operation Rose."
+    },
+    {
+      "id": "set5-q2",
+      "category": "historical_fact",
+      "prompt": "What was the official name of the East German secret police agency renowned for its extensive domestic surveillance and civilian informants?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The Stasi (Ministerium für Staatssicherheit)",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "The Gestapo",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "The KGB",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "The Bundesgrenzschutz",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The Ministry for State Security, commonly called the Stasi, operated one of the most pervasive surveillance and espionage networks in modern history, employing tens of thousands of officers and over 170,000 unofficial collaborators."
+    },
+    {
+      "id": "set5-q3",
+      "category": "historical_fact",
+      "prompt": "In which East German city did the crucial 1989 Monday Demonstrations for peace and democratic freedom originate?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Leipzig (at St. Nicholas Church)",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Dresden",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Potsdam",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Munich",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The Monday Demonstrations began at St. Nicholas Church (Nikolaikirche) in Leipzig under Pastor Christian Führer, growing from small prayer meetings into massive nonviolent protests of hundreds of thousands chanting 'Wir sind das Volk!'."
+    },
+    {
+      "id": "set5-q4",
+      "category": "historical_fact",
+      "prompt": "What accidental remark by SED spokesman Günter Schabowski at a televised press conference sparked the rush to the Berlin Wall on November 9, 1989?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Stating that new private travel regulations took effect 'immediately, without delay'",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Declaring that the Berlin Wall was to be demolished by dynamite that evening",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Announcing that East Germany had officially merged with West Germany",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Ordering the border guards to arrest anyone holding a foreign passport",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "When asked by an Italian journalist when the GDR's new travel regulations would take effect, Schabowski improvised from his notes, stating: 'Das tritt nach meiner Kenntnis... ist das sofort, unverzüglich' ('immediately, without delay'), causing thousands to flock to border crossings."
+    },
+    {
+      "id": "set5-q5",
+      "category": "historical_fact",
+      "prompt": "Which border crossing in Berlin was the very first to open its gates to the crowds on the night of November 9, 1989?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Bornholmer Straße",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Checkpoint Charlie",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Brandenburg Gate",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Invalidenstraße",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Under the pressure of thousands of citizens and without clear orders from headquarters, border commander Harald Jäger opened the gates at Bornholmer Straße at approximately 11:30 PM on November 9, 1989."
+    },
+    {
+      "id": "set5-q6",
+      "category": "historical_fact",
+      "prompt": "What treaty between the two German states and the four Allied powers formally settled the external aspects of German reunification?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The Two-Plus-Four Treaty (Treaty on the Final Settlement with Respect to Germany)",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "The Treaty of Versailles",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "The Dayton Agreement",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "The Warsaw Pact Treaty",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Signed in Moscow in September 1990 by the two German states and the Four Powers (USA, USSR, UK, France), the Two-Plus-Four Treaty restored full sovereignty to a united Germany."
+    },
+    {
+      "id": "set5-q7",
+      "category": "historical_fact",
+      "prompt": "What is the official national holiday celebrated in modern Germany to mark the date of German Reunification in 1990?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Tag der Deutschen Einheit (German Unity Day) on October 3",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Constitution Day on May 23",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Fall of the Wall Day on November 9",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Liberation Day on May 8",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Reunification officially took effect on October 3, 1990, which is celebrated as the national holiday 'Tag der Deutschen Einheit' (German Unity Day)."
+    },
+    {
+      "id": "set5-q8",
+      "category": "historical_fact",
+      "prompt": "Which West German Chancellor famously presented the 'Ten-Point Plan' for overcoming the division of Germany in November 1989?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Helmut Kohl",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Willy Brandt",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Konrad Adenauer",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Helmut Schmidt",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "On November 28, 1989, Chancellor Helmut Kohl caught the world by surprise when he outlined his Ten-Point Plan to the Bundestag, charting a direct course from confederation to complete German unity."
+    },
+    {
+      "id": "set5-q9",
+      "category": "historical_fact",
+      "prompt": "What nickname was given to citizens and souvenir hunters who chipped away pieces of the Berlin Wall with hammers and chisels?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Mauerspechte (wall peckers)",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Trabis",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Ostalgiker",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Grenzsoldaten",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Mauerspechte' (wall woodpeckers/peckers) was the popular German term for people who used hammers and chisels to chip off chunks of the painted concrete wall as souvenirs."
+    },
+    {
+      "id": "set5-q10",
+      "category": "historical_fact",
+      "prompt": "Which neighboring country opened its barbed-wire border with Austria in the summer of 1989, allowing thousands of East Germans to escape to the West?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Hungary",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Poland",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Romania",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Yugoslavia",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In May 1989, Hungary began dismantling its electric border fence with Austria, creating the first tear in the Iron Curtain through which tens of thousands of vacationing East Germans escaped."
+    },
+    {
+      "id": "set5-q11",
+      "category": "vocab_in_context",
+      "targetWord": "clangor",
+      "prompt": "In Paragraph 1, the metallic 'clangor' of pneumatic drills echoed across Berlin. What does 'clangor' mean?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A continuous loud, resonant banging, clattering, or ringing sound",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "A gentle, melodious flute tune",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Absolute, dead silence",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "A foul, pungent odor",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Clangor' denotes a continuous loud, resonant clashing or banging metallic noise."
+    },
+    {
+      "id": "set5-q12",
+      "category": "vocab_in_context",
+      "targetWord": "estranged",
+      "prompt": "In Paragraph 1, overnight families became 'estranged' by coils of razor wire. What does 'estranged' mean in this context?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Physically or emotionally separated, alienated, or no longer close",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Brought closer together in great joy",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Wealthy beyond imagination",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Politically elected to high office",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Estranged' means alienated, distanced, or separated from former close relations or attachments."
+    },
+    {
+      "id": "set5-q13",
+      "category": "vocab_in_context",
+      "targetWord": "invasive",
+      "prompt": "In Paragraph 2, the Stasi constructed an 'invasive apparatus' of surveillance. What does 'invasive' mean?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Tending to spread intrusively, undesirably, and harmfully into private life",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Gentle and completely respectful of boundaries",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Invisible to the naked eye",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Cost-free and open source",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Invasive' describes something that intrudes or spreads aggressively into personal boundaries or private affairs."
+    },
+    {
+      "id": "set5-q14",
+      "category": "vocab_in_context",
+      "targetWord": "marginalize",
+      "prompt": "In Paragraph 2, the state acted to 'marginalize dissidents' through psychological subversion. What does 'marginalize' mean?",
+      "options": [
+        {
+          "id": "a",
+          "text": "To treat a person or group as insignificant, powerless, or peripheral",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "To promote someone to a central leadership role",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "To write copious notes in the margins of a book",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "To compensate with financial bonuses",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Marginalize' means to push someone to the edges of society, treating them as unimportant or without power."
+    },
+    {
+      "id": "set5-q15",
+      "category": "vocab_in_context",
+      "targetWord": "prosaic",
+      "prompt": "In Paragraph 3, daily life in East Berlin had a 'prosaic rhythm'. What is the meaning of 'prosaic'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Lacking poetic beauty; commonplace, unromantic, or mundane",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Wildly imaginative and thrilling",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Written entirely in rhyming verse",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Extremely wealthy and luxurious",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Prosaic' means ordinary, commonplace, matter-of-fact, or lacking excitement and poetic imagination."
+    },
+    {
+      "id": "set5-q16",
+      "category": "vocab_in_context",
+      "targetWord": "restive",
+      "prompt": "In Paragraph 4, a 'restive population' spilled onto the square in Leipzig. What does 'restive' mean?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Unable to remain still, silent, or submissive; restless, impatient, and fidgety",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Soundly asleep and fully rested",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Completely obedient and docile",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Celebratory and partying happily",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Restive' describes individuals or groups unable to remain still or submissive, especially due to growing dissatisfaction or impatience with control."
+    },
+    {
+      "id": "set5-q17",
+      "category": "vocab_in_context",
+      "targetWord": "imperious",
+      "prompt": "In Paragraph 5, Honecker was described as an 'imperious leader'. What does 'imperious' convey?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Arrogant, dictatorial, and domineering",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Humble, modest, and self-effacing",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Easily persuaded by subordinates",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Friendly and jovial in private",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Imperious' means assuming authority without justification; arrogant, domineering, or dictatorial."
+    },
+    {
+      "id": "set5-q18",
+      "category": "vocab_in_context",
+      "targetWord": "enigmatic",
+      "prompt": "In Paragraph 6, Schabowski gave an 'enigmatic, rambling answer'. What is the meaning of 'enigmatic'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Difficult to interpret or understand; mysterious and cryptic",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Crystal clear and mathematically precise",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Extremely humorous and witty",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Written in elegant calligraphy",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Enigmatic' means perplexing, mysterious, or difficult to interpret."
+    },
+    {
+      "id": "set5-q19",
+      "category": "vocab_in_context",
+      "targetWord": "panache",
+      "prompt": "In Paragraph 8, young wall peckers danced atop the ramparts with 'panache'. What does 'panache' mean?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Flamboyant confidence of style, manner, or flair",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Great sorrow and solemn grief",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Stumbling awkwardness and clumsy fear",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Severe physical exhaustion",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Panache' refers to a grand, dashing, or flamboyant manner and style; swagger or distinctive flair."
+    },
+    {
+      "id": "set5-q20",
+      "category": "vocab_in_context",
+      "targetWord": "heterogeneous",
+      "prompt": "In Paragraph 10, Germany became a 'heterogeneous nation'. What does 'heterogeneous' mean?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Diverse in character or content; composed of varied elements",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "Completely identical and uniform throughout",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Strictly confined to a small island",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "Unable to produce industrial goods",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "'Heterogeneous' describes something composed of parts of different kinds; diverse and varied in composition."
+    }
+  ]
+}
 };
 
 export function getHistoricalStory(setNum: number): HistoricalStory | undefined {
-  if (setNum === 1 || setNum === 2) {
-    return HISTORICAL_STORIES[setNum as 1 | 2];
+  if (setNum === 1 || setNum === 2 || setNum === 4 || setNum === 5) {
+    return HISTORICAL_STORIES[setNum as 1 | 2 | 4 | 5];
   }
   return undefined;
 }

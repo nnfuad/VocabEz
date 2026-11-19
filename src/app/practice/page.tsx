@@ -98,7 +98,7 @@ export default function PracticeHubPage() {
         </p>
       </div>
 
-      {/* Historical Story Drills Banner (Sets 1 & 2 Exclusives) */}
+      {/* Historical Story Drills Banner (Sets 1, 2, 4, 5 Available) */}
       <div className="bg-gradient-to-r from-amber-500 via-orange-500 to-rose-500 rounded-3xl p-5 md:p-6 text-white shadow-sm border-b-4 border-amber-700">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
           <div>
@@ -109,15 +109,15 @@ export default function PracticeHubPage() {
               Historical Narrative Drills & Quizzes
             </h2>
             <p className="text-xs md:text-sm font-semibold opacity-90 max-w-xl mt-1">
-              Read dramatic, historically authentic narratives that weave in all 30 words per set, then test your comprehension on both historical facts and vocabulary in context!
+              Read dramatic, multi-perspective historical narratives embedding all 30 words per set, then master both historical facts and context vocabulary!
             </p>
           </div>
           <span className="text-xs font-extrabold px-3 py-1.5 rounded-full bg-white/20 shrink-0 self-start md:self-auto">
-            Sets 1 & 2 Exclusives
+            4 Historical Worlds
           </span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 pt-2">
           {/* Set 1 Story Card */}
           <Link
             href="/story/1"
@@ -125,17 +125,17 @@ export default function PracticeHubPage() {
           >
             <div>
               <span className="text-[10px] font-black uppercase tracking-widest text-emerald-200">
-                Set 1 • Ancient Rome (44 BCE)
+                Set 1 • Rome (44 BCE)
               </span>
-              <h3 className="text-base font-black text-white group-hover:underline mt-0.5">
-                The Twilight of the Republic: Cicero, Caesar, & the Ides of March
+              <h3 className="text-sm font-black text-white group-hover:underline mt-0.5 line-clamp-2">
+                Twilight of the Republic: Cicero & Caesar
               </h3>
               <p className="text-xs text-white/80 line-clamp-2 mt-1">
-                Experience the betrayal, stoic philosophy, and fall of Roman democracy with all 30 Set 1 words embedded.
+                The betrayal, philosophy, and collapse of Roman democracy with all 30 Set 1 words.
               </p>
             </div>
             <div className="flex items-center justify-between text-xs font-black text-emerald-100 pt-3 mt-2 border-t border-white/10">
-              <span>Read Story + 20 Quizzes</span>
+              <span>Read + 20 Qs</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
             </div>
           </Link>
@@ -147,17 +147,61 @@ export default function PracticeHubPage() {
           >
             <div>
               <span className="text-[10px] font-black uppercase tracking-widest text-sky-200">
-                Set 2 • Italy (1610–1633)
+                Set 2 • Italy (1610)
               </span>
-              <h3 className="text-base font-black text-white group-hover:underline mt-0.5">
-                The Trial of Galileo Galilei: Astronomy, Heresy, & the Inquisition
+              <h3 className="text-sm font-black text-white group-hover:underline mt-0.5 line-clamp-2">
+                Trial of Galileo: Astronomy & Inquisition
               </h3>
               <p className="text-xs text-white/80 line-clamp-2 mt-1">
-                Follow the discovery of Jupiter's moons, papal court intrigue, and the Inquisition trial with all 30 Set 2 words.
+                Jupiter's moons, papal intrigue, and the Inquisition trial with all 30 Set 2 words.
               </p>
             </div>
             <div className="flex items-center justify-between text-xs font-black text-sky-100 pt-3 mt-2 border-t border-white/10">
-              <span>Read Story + 20 Quizzes</span>
+              <span>Read + 20 Qs</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
+            </div>
+          </Link>
+
+          {/* Set 4 Story Card */}
+          <Link
+            href="/story/4"
+            className="group p-4 rounded-2xl bg-white/10 hover:bg-white/20 border border-white/20 transition flex flex-col justify-between backdrop-blur-sm"
+          >
+            <div>
+              <span className="text-[10px] font-black uppercase tracking-widest text-amber-200">
+                Set 4 • USA (1787–1791)
+              </span>
+              <h3 className="text-sm font-black text-white group-hover:underline mt-0.5 line-clamp-2">
+                Forge of the Republic: Federalists & Bill of Rights
+              </h3>
+              <p className="text-xs text-white/80 line-clamp-2 mt-1">
+                Hamilton, Madison, Jefferson, & Henry debate sovereignty with all 30 Set 4 words.
+              </p>
+            </div>
+            <div className="flex items-center justify-between text-xs font-black text-amber-100 pt-3 mt-2 border-t border-white/10">
+              <span>Read + 20 Qs</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
+            </div>
+          </Link>
+
+          {/* Set 5 Story Card */}
+          <Link
+            href="/story/5"
+            className="group p-4 rounded-2xl bg-white/10 hover:bg-white/20 border border-white/20 transition flex flex-col justify-between backdrop-blur-sm"
+          >
+            <div>
+              <span className="text-[10px] font-black uppercase tracking-widest text-purple-200">
+                Set 5 • Germany (1961–1990)
+              </span>
+              <h3 className="text-sm font-black text-white group-hover:underline mt-0.5 line-clamp-2">
+                The Divided Sky: Berlin Wall & Reunification
+              </h3>
+              <p className="text-xs text-white/80 line-clamp-2 mt-1">
+                Stasi secrets, Leipzig candles, and Bornholmer Straße breach with all 30 Set 5 words.
+              </p>
+            </div>
+            <div className="flex items-center justify-between text-xs font-black text-purple-100 pt-3 mt-2 border-t border-white/10">
+              <span>Read + 20 Qs</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
             </div>
           </Link>
